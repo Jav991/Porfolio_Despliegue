@@ -1,0 +1,7 @@
+Portatil;Electronica;1200;10
+Teclado;Electronica;85.50;5
+Mesa;Muebles;210.75;8
+SillaErgonomica;Muebles;145;15
+Monitor27;Electronica;350;20
+LamparaEstudio;Iluminacion;40;30
+Móvil;Electronica;1500;2;

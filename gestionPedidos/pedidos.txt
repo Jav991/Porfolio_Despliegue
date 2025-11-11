@@ -1,0 +1,7 @@
+--- NUEVO PEDIDO ---
+Cliente: Javier
+Total: 3600.0€
+Productos:
+- Portatil | Cantidad: 2 | Precio: 1200.0€
+- Portatil | Cantidad: 1 | Precio: 1200.0€
+----------------------------
