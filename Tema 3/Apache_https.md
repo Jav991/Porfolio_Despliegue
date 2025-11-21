@@ -94,5 +94,33 @@ En conclusión, **los certificados autofirmados** son adecuados para pruebas int
 
 ---
 
+---
 
+### 2.3 Módulos necesarios en Apache2 para habilitar HTTPS
+
+Para que Apache2 pueda servir contenido mediante HTTPS en Ubuntu, es necesario habilitar ciertos módulos. A continuación se detallan los módulos obligatorios y opcionales:
+
+#### Módulos obligatorios
+
+- **mod_ssl**: Permite a Apache manejar conexiones seguras mediante SSL/TLS. Es imprescindible para activar HTTPS y configurar directivas como `SSLEngine`, `SSLCertificateFile` y `SSLCertificateKeyFile`.  
+  Se habilita con:  
+  ```bash
+  sudo a2enmod ssl
+  ```
+- **mod_headers**:Permite añadir y gestionar cabeceras HTTP. Es útil para implementar políticas de seguridad adicionales como HSTS (Strict-Transport-Security).
+- Se habilita con:
+   ```bash
+   sudo a2enmod headers
+
+### Módulo opcional
+
+   - **mod_rewrite**: Se utiliza para redirigir automáticamente el tráfico HTTP hacia HTTPS, garantizando que todas las conexiones se realicen de forma segura.
+   - Se habilita con:
+      ```bash
+      sudo a2enmod rewrite
+      ```
+ Estos módulos permiten configurar correctamente el servidor Apache para servir contenido cifrado y seguro mediante HTTPS.
+ **Fuentes consultadas:**  
+- [TechExpert – Habilitar HTTPS en Apache paso a paso](https://techexpert.tips/es/apache-es/habilitar-https-en-apache/)  
+- [Código Maestro – Configurar HTTPS en Apache en Ubuntu Linux](https://www.codigomaestro.com/apache/como-configurar-https-en-apache-en-ubuntu-linux/)
 
