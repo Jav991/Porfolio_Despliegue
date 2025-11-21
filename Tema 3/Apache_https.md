@@ -5,7 +5,7 @@
 
 ---
 
-### U.T. 2 **Práctica 1: Apache**
+### U.T. 2 **Práctica 2: Apache**
 
 **Curso:** 2ºDAW  
 **Autor:** Javier Gómez Comino  
