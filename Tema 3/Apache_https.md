@@ -48,6 +48,16 @@ Posteriormente, se llevará a cabo la configuración técnica completa, incluyen
 
 ---
 
+## 2. Investigación
+
+Antes de llevar a cabo la implementación técnica del protocolo HTTPS en Apache2 sobre Ubuntu, es fundamental comprender los conceptos clave que sustentan esta tecnología.  
+En esta sección se analiza el funcionamiento del protocolo HTTPS, los tipos de certificados SSL/TLS disponibles y los módulos necesarios en Apache para habilitar conexiones seguras.  
+Esta base teórica permitirá realizar una configuración correcta y segura del servidor web.
+
+---
+
+
+
 ### 2.1 Funcionamiento del protocolo HTTPS y su importancia
 
 HTTPS (Hypertext Transfer Protocol Secure) es la versión segura del protocolo HTTP.  
