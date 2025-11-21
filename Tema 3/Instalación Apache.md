@@ -1,7 +1,7 @@
 # DESARROLLO DE APLICACIONES WEB
 ### Despliegue de Aplicaciones Web
 
-![Portada](../img/Apache,png)
+![Portada](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/Apache.png)
 ---
 
 ### U.T. 2 **Práctica 1: Apache**
