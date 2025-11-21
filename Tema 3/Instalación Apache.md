@@ -111,7 +111,7 @@ Si todo está bien, deberías ver la página que creamos en el archivo `index.ht
 
 ![Acctivaación Web](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/ActivacionSitioWeb2.png)
 
-✅ ¡Listo! Tu servidor Apache está funcionando y sirviendo tu sitio web desde Ubuntu.
+¡Listo! Tu servidor Apache está funcionando y sirviendo tu sitio web desde Ubuntu.
 
 ---
 
