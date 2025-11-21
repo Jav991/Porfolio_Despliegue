@@ -2,6 +2,7 @@
 ### Despliegue de Aplicaciones Web
 
 ![Portada](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/Apache.png)
+
 ---
 
 ### U.T. 2 **Práctica 1: Apache**
@@ -51,3 +52,31 @@ Actualizamos los paquetes y luego instalamos Apache:
 ```bash
 sudo apt update
 sudo apt install apache2
+```
+
+### 2. Creación de nuestro sitio web
+
+Creamos el directorio del sitio y el archivo HTML:
+```bash
+sudo mkdir /var/www/gci/
+cd /var/www/gci/
+nano index.html
+```
+Una vez dentro del editor nano, escribimos el siguiente contenido HTML
+![Configuración Apache](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/ConfiguracionApache2.png)
+
+
+### 3. Configuración del archivo VirtualHost
+
+Apache permite gestionar múltiples sitios web en el mismo servidor mediante archivos llamados *VirtualHost*. Cada uno define cómo debe comportarse el servidor al recibir peticiones para un dominio específico.
+Nos dirigimos a la carpeta de configuración de Apache para crear un nuevo archivo de configuración:
+
+![Configuración Apache](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/Configuraci%C3%B3nApache1.png)
+
+```bash
+cd /etc/apache2/sites-available/
+sudo cp 000-default.conf gci.conf
+sudo nano gci.conf
+```
+![Configuración Apache](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/ConfiguracionApache2.png)
+
