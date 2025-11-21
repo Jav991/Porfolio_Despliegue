@@ -1,7 +1,7 @@
 # DESARROLLO DE APLICACIONES WEB
 ### Despliegue de Aplicaciones Web
 
-![Portada](/attachments/H33Xf79RuMBx4p5huRNF8.png)
+![Portada](../img/Apache,png)
 ---
 
 ### U.T. 2 **Práctica 1: Apache**
