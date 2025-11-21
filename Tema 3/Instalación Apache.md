@@ -1,4 +1,3 @@
-  
 # DESARROLLO DE APLICACIONES WEB
 ### Despliegue de Aplicaciones Web
 
@@ -9,8 +8,8 @@
 ### U.T. 2 **Práctica 1: Apache**
 
 **Curso:** 2ºDAW  
-**Autor:** Basi Córdoba Arcas  
-**Fecha:** 07/11/2025
+**Autor:** Javier Gómez Comino  
+**Fecha:** 21/11/2025  
 
 ---
 
@@ -20,7 +19,7 @@
 2. Creación de nuestro sitio web  
 3. Configuración del archivo VirtualHost  
 4. Activación del archivo VirtualHost  
-5. Comprobación en el navegador
+5. Comprobación en el navegador  
 
 ---
 
@@ -40,7 +39,7 @@ Apache se utiliza principalmente para alojar sitios web en internet. Sus funcion
 - Alojar sitios web  
 - Gestión de conexiones  
 - Soporte para módulos  
-- Configuración flexible
+- Configuración flexible  
 
 ---
 
