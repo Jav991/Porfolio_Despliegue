@@ -1,5 +1,5 @@
 # PORTFOLIO
-### Basi Cordoba Arcas
+### Javier Gómez-Comino Comino
 ## Unidad 1: Github y MarkDown
 - ### [Diario](https://github.com/Jav991/Porfolio_Despliegue/blob/main/Tema%201/diario_UD1.mdhttps://github.com/Jav991/Porfolio_Despliegue/blob/main/Tema%201/diario_UD1.md)
 - ### [Ejercicios](https://github.com/Jav991/Porfolio_Despliegue/tree/main/Tema%201/gestionPedidos)
