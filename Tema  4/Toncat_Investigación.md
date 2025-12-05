@@ -10,6 +10,8 @@
 # 1. Catalina
 Catalina es el contenedor de servlets de Apache Tomcat y constituye el núcleo del servidor. Gestiona la ejecución de servlets, la lógica interna de las aplicaciones web, la seguridad, sesiones, contextos y el ciclo de vida de cada aplicación. Recibe las peticiones procesadas por Coyote y las ejecuta según la configuración del contenedor. Sus librerías se encuentran en `lib/`, y su configuración principal está en `conf/server.xml`, además de `web.xml` y `context.xml` en cada aplicación.
 
+![Diagrama de Catalina]()
+
 ---
 
 # 2. Coyote
