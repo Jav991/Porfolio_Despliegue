@@ -33,3 +33,38 @@ Para acceder a ambas herramientas, es necesario definir usuarios y roles autoriz
 # 5. Estructura básica de directorios de Tomcat
 
 
+**Descripción rápida:**
+- **bin/** → scripts de arranque y apagado.  
+- **conf/** → configuración principal del servidor.  
+- **lib/** → JAR internos de Tomcat (Catalina, Coyote, Jasper).  
+- **logs/** → registros del servidor.  
+- **webapps/** → aplicaciones desplegadas.  
+- **temp/** → datos temporales.  
+
+---
+
+# 6. Fuentes utilizadas
+
+- Documentación oficial de Apache Tomcat  
+  https://tomcat.apache.org/tomcat-10.1-doc/
+
+- Información de Catalina, arquitectura y contenedores  
+  https://www.oreilly.com/library/view/professional-apache-tomcat/9780471753612/ch01.html
+
+- Coyote HTTP Connector  
+  https://tomcat.apache.org/tomcat-10.1-doc/connectors.html
+
+- Jasper JSP Engine  
+  https://en.wikipedia.org/wiki/Apache_Tomcat
+
+- Tomcat Manager  
+  https://tomcat.apache.org/tomcat-10.1-doc/manager-howto.html
+
+- Tomcat Host Manager  
+  https://tomcat.apache.org/tomcat-10.1-doc/host-manager-howto.html
+
+- Directorios y arquitectura interna  
+  https://personal.ntu.edu.sg/ehchua/programming/howto/Tomcat_More.html
+
+- Estructura del servidor Tomcat  
+  https://training-course-material.com/training/Apache_Tomcat_and_Java_EE_Administration_US
