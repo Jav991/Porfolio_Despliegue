@@ -1,9 +1,9 @@
 ![Portada](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/PortadaConfiuraci%C3%B3n.png)
 
 # Tomcat — Componentes, Estructura y Funcionamiento Interno
-**Autor:** Javier Gómez-Comino Comino  
-**Asignatura:** Despliegue de Aplicaciones Web  
-**Fecha:** 5 diciembre 2025  
+## **Autor:** Javier Gómez-Comino Comino  
+## **Asignatura:** Despliegue de Aplicaciones Web  
+## **Fecha:** 5 diciembre 2025  
 
 ---
 
