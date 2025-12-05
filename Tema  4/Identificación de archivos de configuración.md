@@ -42,4 +42,4 @@ Tras instalar Tomcat, es posible verificar que el servidor está activo utilizan
 ```bash
 sudo systemctl status tomcat10
 ```
-
+![estado](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/estadoTomcat.png)
