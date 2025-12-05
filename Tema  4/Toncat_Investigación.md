@@ -1,4 +1,4 @@
-![Portada](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat2.png)
+![Portada](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/Toncat_Portada.png)
 
 # Tomcat — Componentes, Estructura y Funcionamiento Interno
 **Autor:** Javier Gómez-Comino Comino  
