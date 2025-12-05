@@ -48,6 +48,7 @@ Para acceder a ambas herramientas, es necesario definir usuarios y roles autoriz
 - **webapps/** → aplicaciones desplegadas.  
 - **temp/** → datos temporales.  
 
+  ![Diagrama Final](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/ToncatImagenFinal.png)
 ---
 
 # 6. Fuentes utilizadas
