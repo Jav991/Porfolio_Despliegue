@@ -1,3 +1,12 @@
+![Portada]()
+
+# Tomcat — Componentes, Estructura y Funcionamiento Interno
+**Autor:** Javier Gómez-Comino Comino  
+**Asignatura:** Despliegue de Aplicaciones Web  
+**Fecha:** 5 diciembre 2025  
+
+---
+
 ## Introducción a la instalación de Apache Tomcat en Ubuntu
 
 La instalación de **Apache Tomcat** en Ubuntu es un proceso sencillo y bien estructurado, diseñado para integrar este servidor de aplicaciones Java dentro del sistema operativo de forma estable y segura.  
