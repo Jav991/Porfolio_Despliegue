@@ -24,6 +24,7 @@ Coyote es el conector HTTP/AJP de Tomcat y actúa como punto de entrada del serv
 # 3. Jasper
 Jasper es el motor JSP de Tomcat. Convierte las páginas `.jsp` en servlets Java que Catalina puede ejecutar y recompila automáticamente los JSP cuando detecta cambios. Las clases de Jasper se ubican en `lib/`, y su trabajo genera archivos temporales dentro de `work/` y `temp/`. Permite integrar la ejecución dinámica de contenido mediante Java en las aplicaciones desplegadas.
 
+![Diagrama de Jasper](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/toncatJasper.png)
 ---
 
 # 4. Manager y Host Manager
