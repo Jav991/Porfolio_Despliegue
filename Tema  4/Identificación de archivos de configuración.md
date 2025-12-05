@@ -10,8 +10,8 @@
 <h1 style="font-size:32px; font-weight:bold; margin-bottom:0.3em;">Introducción a la instalación de Apache Tomcat en Ubuntu</h1> 
 <p style="font-size:16px; margin:0;">La instalación de <b>Apache Tomcat</b> en Ubuntu es un proceso sencillo y bien estructurado, diseñado para integrar este servidor de aplicaciones Java dentro del sistema operativo de forma estable y segura.  
 Para comenzar, es necesario preparar el entorno instalando un <b>JDK</b>, ya que Tomcat depende de la Java Virtual Machine para ejecutar servlets y páginas JSP.  
-Una vez configurado Java, Tomcat puede instalarse directamente desde los **repositorios oficiales de Ubuntu**, lo que garantiza una versión compatible y una estructura de directorios estándar.  
-La instalación mediante `apt` también añade un **servicio systemd**, permitiendo iniciar, detener y habilitar Tomcat para que arranque automáticamente junto al sistema.  
+Una vez configurado Java, Tomcat puede instalarse directamente desde los <b>repositorios oficiales de Ubuntu</b>, lo que garantiza una versión compatible y una estructura de directorios estándar.  
+La instalación mediante `apt` también añade un <b>servicio systemd</b>, permitiendo iniciar, detener y habilitar Tomcat para que arranque automáticamente junto al sistema.  
 Tras completar el proceso, el servidor queda listo para desplegar aplicaciones web, administrar recursos y funcionar como un contenedor ligero y eficiente dentro del ecosistema Linux.</p>
 
 ## Instalación de Apache Tomcat en Ubuntu 24.10
