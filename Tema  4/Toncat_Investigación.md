@@ -17,6 +17,8 @@ Catalina es el contenedor de servlets de Apache Tomcat y constituye el núcleo d
 # 2. Coyote
 Coyote es el conector HTTP/AJP de Tomcat y actúa como punto de entrada del servidor. Escucha peticiones en los puertos configurados (por defecto 8080), acepta conexiones TCP y traduce las solicitudes en estructuras internas que Catalina pueda procesar. Sin este componente, Tomcat no podría comunicarse con el exterior. Sus librerías residen en `lib/` y su configuración se define dentro de `conf/server.xml` mediante `<Connector>`.
 
+![Diagrama de Coyote](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/toncatCatalina.png)
+
 ---
 
 # 3. Jasper
