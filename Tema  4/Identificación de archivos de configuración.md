@@ -7,7 +7,7 @@
 
 ---
 
-## Introducción a la instalación de Apache Tomcat en Ubuntu
+<h1 style="font-size:32px; font-weight:bold; margin-bottom:0.3em;">Introducción a la instalación de Apache Tomcat en Ubuntu</h1> 
 
 La instalación de **Apache Tomcat** en Ubuntu es un proceso sencillo y bien estructurado, diseñado para integrar este servidor de aplicaciones Java dentro del sistema operativo de forma estable y segura.  
 Para comenzar, es necesario preparar el entorno instalando un **JDK**, ya que Tomcat depende de la Java Virtual Machine para ejecutar servlets y páginas JSP.  
