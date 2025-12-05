@@ -33,6 +33,8 @@ Los componentes **Manager** y **Host Manager** son aplicaciones administrativas 
 - **Host Manager** permite gestionar hosts virtuales sin reiniciar Tomcat.  
 Para acceder a ambas herramientas, es necesario definir usuarios y roles autorizados en `conf/tomcat-users.xml`.
 
+![Daigrama de Manager](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/toncatManager.png)
+
 ---
 
 # 5. Estructura básica de directorios de Tomcat
