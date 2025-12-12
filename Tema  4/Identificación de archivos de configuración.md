@@ -59,9 +59,46 @@ sudo systemctl status tomcat10
 - **`conf/context.xml`**  
   Configuración de contexto global; define ajustes por defecto de los *Context* (aplicaciones web), como recursos JNDI y opciones de despliegue. [web:19][web:31][web:34]
 
-  - **Para listar los directorios**:
+
+# Archivos de configuración principales de Apache Tomcat
+
+En Apache Tomcat existen varios archivos de configuración clave ubicados en el directorio de configuración (por ejemplo `/etc/tomcat10` cuando se instala como paquete en Ubuntu). Estos ficheros permiten definir cómo escucha el servidor, cómo se despliegan las aplicaciones, qué usuarios tienen acceso y qué parámetros se aplican a los distintos contextos web. [web:2][web:4][web:39]
+
+  - **`server.xml`**  
+    Define la arquitectura interna del servidor Tomcat y cómo escucha peticiones (puertos, conectores, servicios, `Engine`, `Host`, etc.). [web:4][web:11][web:51]  
+    En él se configuran conectores HTTP/HTTPS, tiempo de espera, *thread pools*, *realms* de seguridad, clústeres y *valves* de registro o control de acceso. [web:4][web:11][web:51]
+
+  - **`web.xml`**  
+    Es el descriptor de despliegue global por defecto que se aplica a todas las aplicaciones a menos que éstas lo sobrescriban con su propio `WEB-INF/web.xml`. [web:2][web:9][web:29]  
+    Permite configurar servlets y sus mapeos, filtros, *listeners*, páginas de error, parámetros de contexto y reglas de seguridad (roles, restricciones de URL). [web:29][web:53]
+
+  - **`tomcat-users.xml`**  
+    Define la base de usuarios y roles usada por Tomcat para autenticación sencilla
+
+
+- **Para listar los directorios**:
     ```bash
       ls -l server.xml web.xml tomcat-users.xml context.xml
     ```
     ls -l server.xml web.xml tomcat-users.xml context.xml
 ![Directorios](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/ToncatDirectorios.png)
+
+
+En Apache Tomcat existen varios archivos de configuración clave ubicados en el directorio de configuración (por ejemplo `/etc/tomcat10` cuando se instala como paquete en Ubuntu). Estos ficheros permiten definir cómo escucha el servidor, cómo se despliegan las aplicaciones, qué usuarios tienen acceso y qué parámetros se aplican a los distintos contextos web.
+
+- **`server.xml`**  
+  Define la arquitectura interna del servidor Tomcat y cómo escucha peticiones (puertos, conectores, servicios, `Engine`, `Host`, etc.).  
+  En él se configuran conectores HTTP/HTTPS, tiempo de espera, *thread pools*, *realms* de seguridad, clústeres y *valves* de registro o control de acceso.
+
+- **`web.xml`**  
+  Es el descriptor de despliegue global por defecto que se aplica a todas las aplicaciones a menos que éstas lo sobrescriban con su propio `WEB-INF/web.xml`.  
+  Permite configurar servlets y sus mapeos, filtros, *listeners*, páginas de error, parámetros de contexto y reglas de seguridad (roles, restricciones de URL).
+
+- **`tomcat-users.xml`**  
+  Define la base de usuarios y roles usada por Tomcat para autenticación sencilla, especialmente para las aplicaciones administrativas como Manager y Host Manager.  
+  En este archivo se crean roles (por ejemplo `manager-gui`, `manager-script`) y se asignan a usuarios con usuario/contraseña para controlar quién accede a los recursos protegidos.
+
+- **`context.xml`**  
+  Es la configuración de contexto por defecto que se hereda en todas las aplicaciones desplegadas, salvo que éstas definan su propio `META-INF/context.xml`.  
+  Aquí se pueden configurar recursos JNDI (datasources JDBC, colas JMS), opciones de recarga, gestión de sesiones, rutas a recursos estáticos y *valves* específicas por aplicación.
+
