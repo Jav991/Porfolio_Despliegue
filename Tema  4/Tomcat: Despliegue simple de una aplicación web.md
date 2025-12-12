@@ -22,7 +22,7 @@ Antes de copiar el archivo WAR, se ha comprobado el contenido del directorio de 
   ls -l /var/lib/tomcat10/webapps
 ```
 #### Salida esperada:
-https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcatWebapps.png
+![Wepapps](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcatWebapps.png)
 
 
   
