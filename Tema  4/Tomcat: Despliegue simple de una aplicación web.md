@@ -24,5 +24,8 @@ Antes de copiar el archivo WAR, se ha comprobado el contenido del directorio de 
 #### Salida esperada:
 ![Wepapps](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcatWebapps.png)
 
+Este comando muestra en detalle las aplicaciones ya desplegadas por Tomcat (por ejemplo, `ROOT`, `docs`, `examples`, etc.), y permite verificar que todavía no existe la aplicación `hello` antes de realizar el despliegue.
+
+
 
   
