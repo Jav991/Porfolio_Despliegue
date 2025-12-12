@@ -64,4 +64,4 @@ sudo systemctl status tomcat10
       ls -l server.xml web.xml tomcat-users.xml context.xml
     ```
     ls -l server.xml web.xml tomcat-users.xml context.xml
-
+![Directorios](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/ToncatDirectorios.png)
