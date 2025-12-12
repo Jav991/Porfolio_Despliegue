@@ -43,3 +43,25 @@ Tras instalar Tomcat, es posible verificar que el servidor está activo utilizan
 sudo systemctl status tomcat10
 ```
 ![estado](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/estadoTomcat.png)
+
+
+## Identificación De Archivos Tomcat
+
+- **`conf/server.xml`**  
+  Archivo principal de configuración del servidor Tomcat; define conectores, puertos, motores, hosts y la arquitectura general de la instancia. [web:4][web:11][web:37]
+
+- **`conf/web.xml`**  
+  Descriptor de despliegue global por defecto que establece parámetros, servlets y mapeos que se aplican a todas las aplicaciones del servidor. [web:4][web:24][web:27]
+
+- **`conf/tomcat-users.xml`**  
+  Fichero donde se definen usuarios y roles usados por los *realms* de Tomcat para autenticación y autorización básicas. [web:11][web:28][web:30][web:36]
+
+- **`conf/context.xml`**  
+  Configuración de contexto global; define ajustes por defecto de los *Context* (aplicaciones web), como recursos JNDI y opciones de despliegue. [web:19][web:31][web:34]
+
+  - **Para listar los directorios**:
+    ```bash
+      ls -l server.xml web.xml tomcat-users.xml context.xml
+    ```
+    ls -l server.xml web.xml tomcat-users.xml context.xml
+
