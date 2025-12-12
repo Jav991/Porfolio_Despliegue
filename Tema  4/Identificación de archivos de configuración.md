@@ -102,3 +102,45 @@ En Apache Tomcat existen varios archivos de configuración clave ubicados en el 
   Es la configuración de contexto por defecto que se hereda en todas las aplicaciones desplegadas, salvo que éstas definan su propio `META-INF/context.xml`.  
   Aquí se pueden configurar recursos JNDI (datasources JDBC, colas JMS), opciones de recarga, gestión de sesiones, rutas a recursos estáticos y *valves* específicas por aplicación.
 
+# Mapa de dependencias entre los archivos de configuración de Tomcat
+
+En Apache Tomcat, algunos archivos actúan como configuración global del servidor, mientras que otros definen reglas que se aplican a las aplicaciones web o a los usuarios. El siguiente esquema muestra qué archivo depende de cuál y en qué sentido fluye la configuración.
+
+
+
+                 ┌─────────────────────────────────┐
+                 │           server.xml            │
+                 │ (configura el servidor global)  │
+                 └───────────────┬─────────────────┘
+                                 │
+                                 │ define conectores, hosts, engines
+                                 ▼
+                      ┌───────────────────────┐
+                      │       web.xml         │
+                      │ (configuración        │
+                      │  global de webapps)   │
+                      └──────────┬────────────┘
+                                 │
+                                 │ reglas por defecto
+                                 ▼
+                      ┌───────────────────────┐
+                      │      context.xml      │
+                      │ (ajustes por contexto │
+                      │  y recursos JNDI)     │
+                      └──────────┬────────────┘
+                                 │
+                                 │ se aplica a
+                                 ▼
+                      ┌───────────────────────┐
+                      │  Aplicaciones web     │
+                      │  (WAR, /var/lib/...)  │
+                      └───────────────────────┘
+
+
+                 ┌─────────────────────────────────┐
+                 │        tomcat-users.xml         │
+                 │ (usuarios y roles para acceso   │
+                 │  a Manager/Host Manager y       │
+                 │  recursos protegidos)           │
+                 └─────────────────────────────────┘
+  
