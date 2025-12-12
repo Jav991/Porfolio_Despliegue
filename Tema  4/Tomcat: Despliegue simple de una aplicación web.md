@@ -24,7 +24,21 @@ Antes de copiar el archivo WAR, se ha comprobado el contenido del directorio de 
 #### Salida esperada:
 ![Wepapps](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcatWebapps.png)
 
-Este comando muestra en detalle las aplicaciones ya desplegadas por Tomcat (por ejemplo, `ROOT`, `docs`, `examples`, etc.), y permite verificar que todavía no existe la aplicación `hello` antes de realizar el despliegue.
+### Copia y despliegue del archivo WAR en `webapps`
+
+Una vez obtenido el archivo `hello.war` en el directorio personal del usuario (`/home/javier`), se procede a desplegarlo manualmente copiándolo a la carpeta de aplicaciones de Tomcat, situada en `/var/lib/tomcat10/webapps` en esta instalación de Ubuntu.
+
+Para ello se utilizan los siguientes comandos:
+```bash
+  sudo cp ~/hello.war /var/lib/tomcat10/webapps/
+```
+Una vez echo nos movemos al directorio:
+```bash
+  cd  /var/lib/tomcat10/webapps/
+```
+y nos saldrá
+
+![directorio](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/directorioWebapps.png)
 
 
 
