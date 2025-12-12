@@ -48,29 +48,29 @@ sudo systemctl status tomcat10
 ## Identificación De Archivos Tomcat
 
 - **`conf/server.xml`**  
-  Archivo principal de configuración del servidor Tomcat; define conectores, puertos, motores, hosts y la arquitectura general de la instancia. [web:4][web:11][web:37]
+  Archivo principal de configuración del servidor Tomcat; define conectores, puertos, motores, hosts y la arquitectura general de la instancia.
 
 - **`conf/web.xml`**  
-  Descriptor de despliegue global por defecto que establece parámetros, servlets y mapeos que se aplican a todas las aplicaciones del servidor. [web:4][web:24][web:27]
+  Descriptor de despliegue global por defecto que establece parámetros, servlets y mapeos que se aplican a todas las aplicaciones del servidor.
 
 - **`conf/tomcat-users.xml`**  
-  Fichero donde se definen usuarios y roles usados por los *realms* de Tomcat para autenticación y autorización básicas. [web:11][web:28][web:30][web:36]
+  Fichero donde se definen usuarios y roles usados por los *realms* de Tomcat para autenticación y autorización básicas.
 
 - **`conf/context.xml`**  
-  Configuración de contexto global; define ajustes por defecto de los *Context* (aplicaciones web), como recursos JNDI y opciones de despliegue. [web:19][web:31][web:34]
+  Configuración de contexto global; define ajustes por defecto de los *Context* (aplicaciones web), como recursos JNDI y opciones de despliegue.
 
 
 # Archivos de configuración principales de Apache Tomcat
 
-En Apache Tomcat existen varios archivos de configuración clave ubicados en el directorio de configuración (por ejemplo `/etc/tomcat10` cuando se instala como paquete en Ubuntu). Estos ficheros permiten definir cómo escucha el servidor, cómo se despliegan las aplicaciones, qué usuarios tienen acceso y qué parámetros se aplican a los distintos contextos web. [web:2][web:4][web:39]
+En Apache Tomcat existen varios archivos de configuración clave ubicados en el directorio de configuración (por ejemplo `/etc/tomcat10` cuando se instala como paquete en Ubuntu). Estos ficheros permiten definir cómo escucha el servidor, cómo se despliegan las aplicaciones, qué usuarios tienen acceso y qué parámetros se aplican a los distintos contextos web.
 
   - **`server.xml`**  
-    Define la arquitectura interna del servidor Tomcat y cómo escucha peticiones (puertos, conectores, servicios, `Engine`, `Host`, etc.). [web:4][web:11][web:51]  
-    En él se configuran conectores HTTP/HTTPS, tiempo de espera, *thread pools*, *realms* de seguridad, clústeres y *valves* de registro o control de acceso. [web:4][web:11][web:51]
+    Define la arquitectura interna del servidor Tomcat y cómo escucha peticiones (puertos, conectores, servicios, `Engine`, `Host`, etc.).
+    En él se configuran conectores HTTP/HTTPS, tiempo de espera, *thread pools*, *realms* de seguridad, clústeres y *valves* de registro o control de acceso.
 
   - **`web.xml`**  
-    Es el descriptor de despliegue global por defecto que se aplica a todas las aplicaciones a menos que éstas lo sobrescriban con su propio `WEB-INF/web.xml`. [web:2][web:9][web:29]  
-    Permite configurar servlets y sus mapeos, filtros, *listeners*, páginas de error, parámetros de contexto y reglas de seguridad (roles, restricciones de URL). [web:29][web:53]
+    Es el descriptor de despliegue global por defecto que se aplica a todas las aplicaciones a menos que éstas lo sobrescriban con su propio `WEB-INF/web.xml`.
+    Permite configurar servlets y sus mapeos, filtros, *listeners*, páginas de error, parámetros de contexto y reglas de seguridad (roles, restricciones de URL).
 
   - **`tomcat-users.xml`**  
     Define la base de usuarios y roles usada por Tomcat para autenticación sencilla
