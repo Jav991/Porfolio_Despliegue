@@ -18,7 +18,11 @@ Tomcat detecta y despliega automáticamente las aplicaciones que se colocan en s
 ### Comprobación del directorio `webapps`
 Antes de copiar el archivo WAR, se ha comprobado el contenido del directorio de aplicaciones de Tomcat. En esta instalación de Tomcat 10 sobre Ubuntu, la ruta utilizada es `/var/lib/tomcat10/webapps`, por lo que en la terminal se ha ejecutado el siguiente comando:
 
-
+```bash
+  ls -l /var/lib/tomcat10/webapps
+```
+#### Salida esperada:
+https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcatWebapps.png
 
 
   
