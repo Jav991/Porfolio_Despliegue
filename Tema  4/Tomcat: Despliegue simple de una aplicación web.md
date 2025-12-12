@@ -36,7 +36,7 @@ Una vez echo nos movemos al directorio:
 ```bash
   cd  /var/lib/tomcat10/webapps/
 ```
-y nos saldrá
+y el resultado del comando será similar al siguiente:
 
 ![directorio](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/directorioWebapps.png)
 
