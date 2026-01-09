@@ -28,3 +28,8 @@ Activamos los módulos requeridos para el proxy AJP:
 ```
 Debería aparecer el siguiente mensaje:
 ![Configuración Apache](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_Configuracion_Apache.png)
+Como aparece tenemos que recargar los módulos y los recargarmos con este comando:
+```bash
+  sudo systemctl restart apache2
+```
+![Apache Restart](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_ApacheRestart.png)
