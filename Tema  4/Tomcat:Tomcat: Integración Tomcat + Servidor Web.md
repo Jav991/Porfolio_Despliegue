@@ -47,3 +47,13 @@ y añadimos las siguientes líneas de código dentro del bloque **(VirtualHost *
 ```
 De modo que se vea así:
 ![Apache_Proxy](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_Proxy.png)
+
+Una vez echo eso guradamos el fichero y comprobamos la configuración de Apache con
+```bash
+  sudo apache2ctl configtest
+```
+y si se ha configurado bien debería de salir:
+```bash
+  Syntax OK
+```
+![Syntax ok](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_Syntax_Ok.png)
