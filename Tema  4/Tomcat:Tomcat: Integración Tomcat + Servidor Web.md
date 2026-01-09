@@ -69,7 +69,7 @@ Una vez echo todo esto reiniciamos apache2 con:
 Editamos el archivo server.xml (en /opt/tomcat/conf/) para ajustar puertos (por defecto 8080 para HTTP), conectores y configuraciones de seguridad como SSL si es necesario.
 Para eso hacemos:
 ```bash
-  sudo nano /opt/tomcat/conf/server.xml
+  sudo nano /etc/tomcat10/server.xml
 ```
 Localizamos la selección del conector AJP y nos aseguramos de que no esté comentado
 -  address="127.0.0.1" → permite que solo Apache en localhost se conecte.
@@ -77,4 +77,12 @@ Localizamos la selección del conector AJP y nos aseguramos de que no esté come
 
 Si la línea está comentada (Cómo ha sido mi caso) pues la descomentamos.
 ![Conf_AJP](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_Conprotocolo.png)
+
+Ahora reiniciamos el servicio de tomcat para aplicar cambios:
+```bash
+  sudo systemctl restart tomcat10
+```
+Y debería reiniciarse sin problemas si hemos echo todo bien:
+![Reinicio_Tomcat](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_ReinicioTomcat.png)
+
    
