@@ -57,3 +57,9 @@ y si se ha configurado bien debería de salir:
   Syntax OK
 ```
 ![Syntax ok](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_Syntax_Ok.png)
+
+Una vez echo todo esto reiniciamos apache2 con:
+```bash
+  sudo systemctl restart apache2
+```
+
