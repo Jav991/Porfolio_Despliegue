@@ -33,3 +33,17 @@ Como aparece tenemos que recargar los módulos y los recargarmos con este comand
   sudo systemctl restart apache2
 ```
 ![Apache Restart](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_ApacheRestart.png)
+
+### Editar la configuración del sitio por defecto (000-default.conf):
+Editamos el fichero del sitio por defecto con 
+```bash
+  sudo nano /nano /etc/apache2/sites-available/000-default.conf
+```
+y añadimos las siguientes líneas de código dentro del bloque **(VirtualHost *:80)**
+```bash
+  # Proxy hacia Tomcat usando AJP
+  ProxyPass "/miapp" "ajp://localhost:8009/miapp"
+  ProxyPassReverse "/miapp" "ajp://localhost:8009/miapp"
+```
+De modo que se vea así:
+![Apache_Proxy](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_Proxy.png)
