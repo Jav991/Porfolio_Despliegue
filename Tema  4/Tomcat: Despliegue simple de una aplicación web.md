@@ -13,9 +13,11 @@ A lo largo de la práctica se descargará o generará un WAR sencillo (por ejemp
 Para realizar el despliegue se ha utilizado un archivo WAR de ejemplo llamado `hello.war`, que contiene una aplicación web Java muy sencilla (tipo *Hello World* en JSP). Este archivo se ha guardado inicialmente en el directorio personal del usuario (`/home/javier`).
 
 ### Copia del WAR a la carpeta `webapps`
-Tomcat detecta y despliega automáticamente las aplicaciones que se colocan en su directorio de aplicaciones web. En la instalación de Tomcat 10 sobre Ubuntu utilizada en esta práctica, la ruta es:
-
-### Comprobación del directorio `webapps`
+Tomcat detecta y despliega automáticamente las aplicaciones que se colocan en su directorio de aplicaciones web. En la instalación de Tomcat 10 sobre Ubuntu utilizada en esta práctica,el comando es:
+```bash
+sudo cp ~/hello.war /var/lib/tomcat10/webapps/
+```
+## Comprobación del directorio `webapps`
 Antes de copiar el archivo WAR, se ha comprobado el contenido del directorio de aplicaciones de Tomcat. En esta instalación de Tomcat 10 sobre Ubuntu, la ruta utilizada es `/var/lib/tomcat10/webapps`, por lo que en la terminal se ha ejecutado el siguiente comando:
 
 ```bash
