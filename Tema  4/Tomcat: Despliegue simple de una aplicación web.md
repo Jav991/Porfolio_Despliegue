@@ -40,6 +40,10 @@ y el resultado del comando será similar al siguiente:
 
 ![directorio](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/directorioWebapps.png)
 
+### Comprobación final:
+Una vez que Tomcat ha detectado el archivo `.war`, lo ha descomprimido automáticamente y ha desplegado la aplicación, procedemos a verificar que todo funciona correctamente accediendo desde el navegador.
+**URL:** http://localhost:8080/HelloWordExample/
+
 
 
   
