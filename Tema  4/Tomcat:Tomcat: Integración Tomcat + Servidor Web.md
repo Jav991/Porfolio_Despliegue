@@ -63,3 +63,18 @@ Una vez echo todo esto reiniciamos apache2 con:
   sudo systemctl restart apache2
 ```
 ![Restar Apache](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_Restart_Apache2.png)
+
+
+## 3.Configuración de Tomcat para habilitar AJP
+Editamos el archivo server.xml (en /opt/tomcat/conf/) para ajustar puertos (por defecto 8080 para HTTP), conectores y configuraciones de seguridad como SSL si es necesario.
+Para eso hacemos:
+```bash
+  sudo nano /opt/tomcat/conf/server.xml
+```
+Localizamos la selección del conector AJP y nos aseguramos de que no esté comentado
+-  address="127.0.0.1" → permite que solo Apache en localhost se conecte.
+-  port="8009" → puerto por defecto AJP.
+
+Si la línea está comentada (Cómo ha sido mi caso) pues la descomentamos.
+![Conf_AJP](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_Conprotocolo.png)
+   
