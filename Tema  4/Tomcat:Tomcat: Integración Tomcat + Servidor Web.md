@@ -85,4 +85,9 @@ Ahora reiniciamos el servicio de tomcat para aplicar cambios:
 Y debería reiniciarse sin problemas si hemos echo todo bien:
 ![Reinicio_Tomcat](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_ReinicioTomcat.png)
 
+## 4.Despliegue de la aplicación web  
+Copiamos WAR/carpetas JSP a webapps Tomcat las detecta y despliega automáticamente.
+Y comprobamos desde el navegador.
+![Tomcat_Comprobación](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_Comprobaci%C3%B3n.png)
+
    
