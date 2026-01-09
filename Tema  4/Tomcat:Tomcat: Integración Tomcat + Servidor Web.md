@@ -1,5 +1,16 @@
 ![Portada](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_Integracion_Servidor_Portada.jpg)
 
 ## Introducción a la práctica: Despliegue simple en Tomcat
+En entornos reales de producción, no es habitual exponer directamente el puerto de Tomcat (8080 por defecto) a internet. En su lugar, se coloca un servidor web robusto como **Apache HTTP Server** delante de Tomcat actuando como **reverse proxy** (proxy inverso).
 
-Esta práctica se centra en comprender y documentar el despliegue básico de una aplicación web Java en Tomcat sobre Ubuntu. El objetivo principal es ver cómo un archivo WAR pasa de ser un simple fichero en el sistema de archivos a convertirse en una aplicación accesible desde el navegador mediante un contexto como `/miapp`. 
+Esta arquitectura ofrece múltiples ventajas:
+- Apache maneja conexiones HTTPS/SSL de forma eficiente (certificados, cifrado).
+- Mejora la seguridad al ocultar la estructura interna de Tomcat.
+- Permite servir contenido estático (imágenes, CSS, JS) directamente desde Apache.
+- Facilita el balanceo de carga y alta disponibilidad si hay varios nodos Tomcat.
+
+Existen dos formas principales de integrar ambos:
+1. Usando el protocolo **AJP/1.3** (Apache JServ Protocol) mediante el módulo `mod_proxy_ajp` o `mod_jk` → más eficiente y binario.
+2. Usando **HTTP proxy** simple mediante `mod_proxy` y `mod_proxy_http` → más sencillo pero menos optimizado.
+
+En esta práctica se instalará Apache en una máquina virtual Ubuntu (si no está ya instalado), se configurará uno de estos conectores como reverse proxy hacia Tomcat, y se comprobará que una aplicación web Java desplegada en Tomcat responde correctamente a través del puerto estándar de Apache (80/443), demostrando la integración completa.
