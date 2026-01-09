@@ -15,7 +15,7 @@ Existen dos formas principales de integrar ambos:
 
 En esta práctica se instalará Apache en una máquina virtual Ubuntu (si no está ya instalado), se configurará uno de estos conectores como reverse proxy hacia Tomcat, y se comprobará que una aplicación web Java desplegada en Tomcat responde correctamente a través del puerto estándar de Apache (80/443), demostrando la integración completa.
 
-## 1.Configuración de Apache como reverse proxy hacia Tomcat
+## 1.Activación de módulos de Apache necesarios para proxy
 Una vez confirmado que Apache HTTP Server está instalado y en ejecución (`sudo systemctl status apache2` muestra `active (running)`)
 ![Imagen_Confirmación](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_Apache.png)
 
@@ -34,8 +34,8 @@ Como aparece tenemos que recargar los módulos y los recargarmos con este comand
 ```
 ![Apache Restart](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_ApacheRestart.png)
 
-## 2.Editar la configuración del sitio por defecto (000-default.conf):
-Editamos el fichero del sitio por defecto con 
+## 2.Configuración de Apache como reverse proxy hacia Tomcat
+Lo primero es editar el archivo de configuración del sitio por defecto (000-default.conf) con:
 ```bash
   sudo nano /nano /etc/apache2/sites-available/000-default.conf
 ```
