@@ -46,6 +46,7 @@ y el resultado del comando será similar al siguiente:
 Una vez que Tomcat ha detectado el archivo `.war`, lo ha descomprimido automáticamente y ha desplegado la aplicación, procedemos a verificar que todo funciona correctamente accediendo desde el navegador.
 **URL:** http://localhost:8080/HelloWordExample/
 
-
+Se muestra en la siguiente captura el resultado
+![capturaFinal](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/TomcatDespliegue.png)
 
   
