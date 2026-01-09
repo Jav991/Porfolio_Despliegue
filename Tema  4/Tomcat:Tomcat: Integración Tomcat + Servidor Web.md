@@ -1,6 +1,6 @@
 ![Portada](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_IntegracionWeb/Tomcat_Integracion_Servidor_Portada.jpg)
 
-## Introducción a la práctica: Despliegue simple en Tomcat
+## Introducción a la práctica: Tomcat: Integración Tomcat + Servidor web
 En entornos reales de producción, no es habitual exponer directamente el puerto de Tomcat (8080 por defecto) a internet. En su lugar, se coloca un servidor web robusto como **Apache HTTP Server** delante de Tomcat actuando como **reverse proxy** (proxy inverso).
 
 Esta arquitectura ofrece múltiples ventajas:
