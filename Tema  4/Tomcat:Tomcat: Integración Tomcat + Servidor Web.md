@@ -23,4 +23,5 @@ Activamos los módulos requeridos para el proxy AJP:
   sudo a2enmod proxy_ajp
   sudo a2enmod rewrite
 ```
-Se debería ver así
+Debería aparecer el siguiente mensaje:
+![Configuración Apache]()
