@@ -150,13 +150,11 @@ sudo nano /etc/tomcat10/Catalina/localhost/host-manager.xml
 sudo systemctl restart tomcat10
 ```
 
-### Verificar el acceso:
+### Verificamos el acceso:
 
-Accede a las aplicaciones desde tu navegador:
+Accedemos a las aplicaciones desde el navegador:
 
 - **Manager App:** `http://tu-servidor:8080/manager/html`
 - **Host Manager:** `http://tu-servidor:8080/host-manager/html`
 
 ---
-
-**⚠️ Nota de seguridad:** En entornos de producción, se recomienda mantener las restricciones de IP y usar contraseñas robustas. Considera también el uso de HTTPS para las conexiones administrativas.
