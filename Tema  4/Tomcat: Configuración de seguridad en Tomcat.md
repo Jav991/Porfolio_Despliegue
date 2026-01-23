@@ -45,6 +45,9 @@ Después de modificar el archivo, reinicia Tomcat:
 sudo systemctl restart tomcat10
 ```
 
+### deberia quedar así
+![Seguridad_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_seguridad_1.png)
+
 ## 2. Restringir el acceso al Manager
 
 Tomcat incluye dos aplicaciones de administración:
@@ -71,10 +74,6 @@ O también puede estar en:
 ```bash
 sudo find /etc/tomcat10 /usr/share/tomcat10 -name "context.xml" | grep manager
 ```
-
-### deberia quedar así
-![Seguridad_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_seguridad_1.png)
-
 ### Contenido predeterminado del archivo:
 
 ```xml
