@@ -88,17 +88,6 @@ Esta restricción se implementa mediante una **Valve** en el archivo:
 /etc/tomcat10/Catalina/localhost/manager.xml
 ```
 
-O también puede estar en:
-
-```bash
-/usr/share/tomcat10-admin/manager/META-INF/context.xml
-```
-
-### Localizar el archivo de configuración:
-
-```bash
-sudo find /etc/tomcat10 /usr/share/tomcat10 -name "*manager*" -type f
-```
 
 En Tomcat 10, normalmente encontrarás:
 - `/etc/tomcat10/Catalina/localhost/manager.xml`
