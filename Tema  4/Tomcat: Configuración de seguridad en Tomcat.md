@@ -112,6 +112,9 @@ El archivo `/etc/tomcat10/Catalina/localhost/manager.xml` contiene:
 
 Esta configuración solo permite acceso desde localhost (127.x.x.x o ::1).
 
+### Debe de quedar así
+![Seguridad_Tomcat_3](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomcat_Seguridad_3.png)
+
 ### Opciones de configuración:
 
 #### Opción 1: Permitir acceso desde una IP específica
