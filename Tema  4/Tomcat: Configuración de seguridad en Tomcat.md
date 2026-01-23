@@ -93,13 +93,13 @@ En Tomcat 10, normalmente encontrarás:
 - `/etc/tomcat10/Catalina/localhost/manager.xml`
 - `/etc/tomcat10/Catalina/localhost/host-manager.xml`
 
-### Editar el archivo del Manager:
+Editar el archivo del Manager:
 
 ```bash
 sudo nano /etc/tomcat10/Catalina/localhost/manager.xml
 ```
 
-### Contenido del archivo:
+ Contenido del archivo:
 
 El archivo `/etc/tomcat10/Catalina/localhost/manager.xml` contiene:
 
@@ -161,5 +161,9 @@ Accedemos a las aplicaciones desde el navegador:
 
 
  ## 3. Configurar HTTPS con keystore y conector SSL
-
+ Habilitar conexiones cifradas (HTTPS) en Tomcat usando un certificado autofirmado.
  
+ **Pasos a seguir:**
+  1. Crear keystore con `keytool` → almacena certificado privado.
+  2. Configurar conector SSL en `server.xml` → escucha puerto 8443.
+  3. Resultado: Acceso seguro por `https://localhost:8443/`. 
