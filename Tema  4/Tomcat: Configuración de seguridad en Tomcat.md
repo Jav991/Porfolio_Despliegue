@@ -25,3 +25,16 @@ Ejemplo de configuración:
       <user username="admin" password="TuPasswordSegura123" roles="manager-gui,admin-gui"/>
   </tomcat-users>
 ```
+
+## 2. Restringir el acceso al Manager
+
+Tomcat incluye dos aplicaciones de administración:
+
+- **Manager App**
+- **Host Manager**
+
+Para mejorar la seguridad, Tomcat restringe por defecto el acceso a estas aplicaciones únicamente desde `localhost`.  
+Esta restricción se implementa mediante una **Valve** en el archivo:
+
+```bash
+/opt/tomcat/webapps/manager/META-INF/context.xml
