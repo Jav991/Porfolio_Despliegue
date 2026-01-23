@@ -3,9 +3,11 @@
 ## 1. Definir roles y usuarios en `tomcat-users.xml`
 
 Para permitir el acceso a las aplicaciones de administración de Tomcat, es necesario definir usuarios y roles en el archivo `tomcat-users.xml`, ubicado normalmente en:
+
 ```bash
-  /opt/tomcat/conf/tomcat-users.xml
+/etc/tomcat10/tomcat-users.xml
 ```
+
 Tomcat define varios roles administrativos:
 
 | Rol | Descripción |
@@ -16,14 +18,31 @@ Tomcat define varios roles administrativos:
 | `manager-jmx` | Acceso a la gestión vía JMX |
 | `manager-status` | Permite consultar el estado del servidor |
 
-Ejemplo de configuración:
+### Ejemplo de configuración:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcat-users xmlns="http://tomcat.apache.org/xml"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
+              version="1.0">
+  
+  <role rolename="manager-gui"/>
+  <role rolename="admin-gui"/>
+  <user username="admin" password="TuPasswordSegura123" roles="manager-gui,admin-gui"/>
+</tomcat-users>
+```
+
+### Editar el archivo:
 
 ```bash
-  <tomcat-users>
-      <role rolename="manager-gui"/>
-      <role rolename="admin-gui"/>
-      <user username="admin" password="TuPasswordSegura123" roles="manager-gui,admin-gui"/>
-  </tomcat-users>
+sudo nano /etc/tomcat10/tomcat-users.xml
+```
+
+Después de modificar el archivo, reinicia Tomcat:
+
+```bash
+sudo systemctl restart tomcat10
 ```
 
 ## 2. Restringir el acceso al Manager
@@ -33,8 +52,93 @@ Tomcat incluye dos aplicaciones de administración:
 - **Manager App**
 - **Host Manager**
 
-Para mejorar la seguridad, Tomcat restringe por defecto el acceso a estas aplicaciones únicamente desde `localhost`.  
+Para mejorar la seguridad, Tomcat restringe por defecto el acceso a estas aplicaciones únicamente desde `localhost`.
+
 Esta restricción se implementa mediante una **Valve** en el archivo:
 
 ```bash
-/opt/tomcat/webapps/manager/META-INF/context.xml
+/usr/share/tomcat10/webapps/manager/META-INF/context.xml
+```
+
+O también puede estar en:
+
+```bash
+/etc/tomcat10/Catalina/localhost/manager.xml
+```
+
+### Localizar el archivo de configuración:
+
+```bash
+sudo find /etc/tomcat10 /usr/share/tomcat10 -name "context.xml" | grep manager
+```
+
+### Contenido predeterminado del archivo:
+
+```xml
+<Context antiResourceLocking="false" privileged="true" >
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+</Context>
+```
+
+Esta configuración solo permite acceso desde localhost (127.x.x.x o ::1).
+
+### Opciones de configuración:
+
+#### Opción 1: Permitir acceso desde una IP específica
+
+```xml
+<Context antiResourceLocking="false" privileged="true" >
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1|192\.168\.1\.100" />
+</Context>
+```
+
+#### Opción 2: Permitir acceso desde una red completa
+
+```xml
+<Context antiResourceLocking="false" privileged="true" >
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1|192\.168\.1\.\d+" />
+</Context>
+```
+
+#### Opción 3: Deshabilitar la restricción (NO RECOMENDADO en producción)
+
+Comentar o eliminar la sección `<Valve>`:
+
+```xml
+<Context antiResourceLocking="false" privileged="true" >
+  <!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+</Context>
+```
+
+### Aplicar lo mismo al Host Manager:
+
+```bash
+sudo nano /usr/share/tomcat10/webapps/host-manager/META-INF/context.xml
+```
+
+O:
+
+```bash
+sudo nano /etc/tomcat10/Catalina/localhost/host-manager.xml
+```
+
+### Reiniciar Tomcat después de los cambios:
+
+```bash
+sudo systemctl restart tomcat10
+```
+
+### Verificar el acceso:
+
+Accede a las aplicaciones desde tu navegador:
+
+- **Manager App:** `http://tu-servidor:8080/manager/html`
+- **Host Manager:** `http://tu-servidor:8080/host-manager/html`
+
+---
+
+**⚠️ Nota de seguridad:** En entornos de producción, se recomienda mantener las restricciones de IP y usar contraseñas robustas. Considera también el uso de HTTPS para las conexiones administrativas.
