@@ -164,6 +164,16 @@ Accedemos a las aplicaciones desde el navegador:
  Habilitar conexiones cifradas (HTTPS) en Tomcat usando un certificado autofirmado.
  
  **Pasos a seguir:**
-  1. Crear keystore con `keytool` → almacena certificado privado.
-  2. Configurar conector SSL en `server.xml` → escucha puerto 8443.
-  3. Resultado: Acceso seguro por `https://localhost:8443/`. 
+  1. Crear keystore con `keytool`, almacena certificado privado.
+  2. Configurar conector SSL en `server.xml`, escucha puerto 8443.
+  3. Resultado: Acceso seguro por `https://localhost:8443/`.
+
+Ejecutamos el siguiente comando
+
+```bash
+sudo keytool -genkeypair -alias tomcat -keyalg RSA -keysize 3072 -keystore /etc/tomcat10/keystore.jks -storepass changeit -keypass changeit -validity 90 -dname "CN=localhost, OU=DAW, O=IES, L=CiudadReal, S=CLM, C=ES"
+```
+y deberia salir
+
+![Configurar_HTTPS_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Configurar_SSL_1.png)
+     
