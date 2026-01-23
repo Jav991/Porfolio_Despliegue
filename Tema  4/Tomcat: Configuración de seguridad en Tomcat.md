@@ -179,4 +179,12 @@ y deberia salir
 
 cambiamos lo permisos para que keystore pueda acceder
 ![Configurar_HTPPS_2](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/permiso_1.png)
+
+### 3.1 Configuración del conector SSL
+Editamos el archivo de configuración del servidor:
+```bash
+  sudo nano /etc/tomcat10/server.xml
+```
+Dentro del servicio Catalina, añadimos o habilitamos el siguiente conector HTTPS.
+![Configurar_HTTPS_3](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Configurar_SSL_2.png)
      
