@@ -140,7 +140,8 @@ Aplicamos la misma modificación que hicimos en `manager.xml`.
 ```bash
 sudo nano /etc/tomcat10/Catalina/localhost/host-manager.xml
 ```
-
+### Debe de quedar así
+![Seguridad_tomcat_4](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_seguridad_4.png)
 
 
 ### Reiniciar Tomcat después de los cambios:
