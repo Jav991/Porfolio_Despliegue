@@ -134,18 +134,6 @@ Esta configuración solo permite acceso desde localhost (127.x.x.x o ::1).
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1|192\.168\.1\.\d+" />
 </Context>
 ```
-
-#### Opción 3: Deshabilitar la restricción completamente (NO RECOMENDADO en producción)
-
-Comentar la sección `<Valve>`:
-
-```xml
-<Context antiResourceLocking="false" privileged="true" >
-  <!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve"
-         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
-</Context>
-```
-
 ### Aplicar lo mismo al Host Manager:
 
 ```bash
