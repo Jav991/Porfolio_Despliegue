@@ -16,3 +16,6 @@ http://localhost:8080/manager/html
 A continuación se muestra la ventana de autenticación para acceder a la interfaz Manager App mediante HTTPS.
 ![Acceso_Manager_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_herramientas/Acceso_Maneger_1.png)
 
+Tras la autenticación, se accede correctamente a la interfaz del Tomcat Web Application Manager, desde la cual es posible gestionar las aplicaciones desplegadas en el servidor.
+
+
