@@ -56,7 +56,7 @@ El archivo viene con usuarios de ejemplo **comentados**. Debes descomentar y mod
 3. Cambiar `<must-be-changed>` por contraseñas reales
 4. Añadir `,admin-gui` al usuario admin para acceso al Host Manager
 
-[Seguridad_Tomcat_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_seguridad_1.png)
+![Seguridad_Tomcat_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_seguridad_1.png)
 
 ### Reiniciar Tomcat:
 
