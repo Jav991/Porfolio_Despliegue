@@ -135,12 +135,13 @@ Esta configuración solo permite acceso desde localhost (127.x.x.x o ::1).
 </Context>
 ```
 ### Aplicar lo mismo al Host Manager:
+Aplicamos la misma modificación que hicimos en `manager.xml`.
 
 ```bash
 sudo nano /etc/tomcat10/Catalina/localhost/host-manager.xml
 ```
 
-Aplicar la misma modificación que hiciste en `manager.xml`.
+
 
 ### Reiniciar Tomcat después de los cambios:
 
