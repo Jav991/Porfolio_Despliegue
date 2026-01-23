@@ -33,7 +33,7 @@ Tomcat define varios roles administrativos:
 
 El archivo viene con usuarios de ejemplo **comentados**. Debes descomentar y modificar esta sección:
 
-**Antes (comentado, no funciona):**
+**Antes**
 ```xml
 <!--
   <user username="admin" password="<must-be-changed>" roles="manager-gui"/>
@@ -41,7 +41,7 @@ El archivo viene con usuarios de ejemplo **comentados**. Debes descomentar y mod
 -->
 ```
 
-**Después (funcional):**
+**Después**
 ```xml
 <role rolename="manager-gui"/>
 <role rolename="admin-gui"/>
@@ -55,6 +55,8 @@ El archivo viene con usuarios de ejemplo **comentados**. Debes descomentar y mod
 2. Añadir las definiciones de roles
 3. Cambiar `<must-be-changed>` por contraseñas reales
 4. Añadir `,admin-gui` al usuario admin para acceso al Host Manager
+
+### Debería quedar así
 
 ![Seguridad_Tomcat_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_seguridad_1.png)
 
