@@ -187,4 +187,7 @@ Editamos el archivo de configuración del servidor:
 ```
 Dentro del servicio Catalina, añadimos o habilitamos el siguiente conector HTTPS.
 ![Configurar_HTTPS_3](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Configurar_SSL_2.png)
+
+y saldríia lo siguiente
+![Configuara_HTPPS_4](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Configuracion_SSL_3.png)
      
