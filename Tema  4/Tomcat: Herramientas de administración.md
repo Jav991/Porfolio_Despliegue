@@ -54,5 +54,37 @@ El **Host Manager** permite la gestión de hosts virtuales en Tomcat, entre sus 
 
 Gracias a los hosts virtuales, un único servidor Tomcat puede alojar múltiples sitios web de forma organizada y aislada.
 
+## 3. Ficha descriptiva de las herramientas
+
+### Tomcat Manager
+
+**Descripción:**  
+Tomcat Manager es una herramienta web que permite administrar las aplicaciones desplegadas en el servidor Tomcat. A través de esta interfaz se pueden realizar tareas básicas de gestión sin necesidad de acceder directamente al sistema de archivos del servidor.
+
+**Funciones principales:**  
+- Desplegar nuevas aplicaciones web (archivos `.war`).  
+- Iniciar, detener y recargar aplicaciones en ejecución.  
+- Eliminar aplicaciones desplegadas.  
+- Visualizar información sobre el estado de las aplicaciones y las sesiones activas.
+
+**Uso principal:**  
+Se utiliza principalmente para la gestión y mantenimiento de aplicaciones web durante su desarrollo o administración, facilitando el control del ciclo de vida de las aplicaciones.
+
+---
+
+### Host Manager
+
+**Descripción:**  
+Host Manager es una herramienta de administración incluida en Tomcat que permite gestionar los hosts virtuales del servidor. Su función principal es facilitar la creación y administración de distintos dominios o sitios web dentro de un mismo servidor Tomcat.
+
+**Funciones principales:**  
+- Crear y eliminar hosts virtuales.  
+- Iniciar y detener hosts configurados.  
+- Gestionar la estructura de los distintos dominios alojados en el servidor.
+
+**Uso principal:**  
+Se emplea cuando es necesario alojar varias aplicaciones o dominios en un mismo servidor Tomcat, permitiendo una mejor organización y administración de los entornos.
+
+
 
 
