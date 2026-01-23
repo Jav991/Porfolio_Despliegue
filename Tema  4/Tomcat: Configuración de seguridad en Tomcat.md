@@ -72,6 +72,9 @@ O también puede estar en:
 sudo find /etc/tomcat10 /usr/share/tomcat10 -name "context.xml" | grep manager
 ```
 
+### deberia quedar así
+![Seguridad_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_seguridad_1.png)
+
 ### Contenido predeterminado del archivo:
 
 ```xml
