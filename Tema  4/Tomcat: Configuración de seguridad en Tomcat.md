@@ -8,6 +8,17 @@ Para permitir el acceso a las aplicaciones de administración de Tomcat, es nece
 /etc/tomcat10/tomcat-users.xml
 ```
 
+### Pasos para configurar:
+
+1. Editar el archivo:
+```bash
+sudo nano /etc/tomcat10/tomcat-users.xml
+```
+
+2. Buscar la sección comentada de usuarios (entre `<!--` y `-->`).
+
+3. Descomentar y modificar los usuarios.
+
 Tomcat define varios roles administrativos:
 
 | Rol | Descripción |
@@ -18,34 +29,43 @@ Tomcat define varios roles administrativos:
 | `manager-jmx` | Acceso a la gestión vía JMX |
 | `manager-status` | Permite consultar el estado del servidor |
 
-### Ejemplo de configuración:
+### Configuración de usuarios:
 
+El archivo viene con usuarios de ejemplo **comentados**. Debes descomentar y modificar esta sección:
+
+**Antes (comentado, no funciona):**
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<tomcat-users xmlns="http://tomcat.apache.org/xml"
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
-              version="1.0">
-  
-  <role rolename="manager-gui"/>
-  <role rolename="admin-gui"/>
-  <user username="admin" password="TuPasswordSegura123" roles="manager-gui,admin-gui"/>
-</tomcat-users>
+<!--
+  <user username="admin" password="<must-be-changed>" roles="manager-gui"/>
+  <user username="robot" password="<must-be-changed>" roles="manager-script"/>
+-->
 ```
 
-### Editar el archivo:
-
-```bash
-sudo nano /etc/tomcat10/tomcat-users.xml
+**Después (funcional):**
+```xml
+<role rolename="manager-gui"/>
+<role rolename="admin-gui"/>
+<user username="admin" password="admin123" roles="manager-gui, admin-gui"/>
+<user username="robot" password="robot123" roles="manager-script"/>
 ```
 
-### deberia quedar así
-![Seguridad_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_seguridad_1.png)
+### Pasos:
 
-Después de modificar el archivo, reinicia Tomcat:
+1. Eliminar `<!--` al inicio y `-->` al final
+2. Añadir las definiciones de roles
+3. Cambiar `<must-be-changed>` por contraseñas reales
+4. Añadir `,admin-gui` al usuario admin para acceso al Host Manager
+
+### Reiniciar Tomcat:
 
 ```bash
 sudo systemctl restart tomcat10
+```
+
+### Verificar el estado:
+
+```bash
+sudo systemctl status tomcat10
 ```
 
 ## 2. Restringir el acceso al Manager
@@ -60,21 +80,34 @@ Para mejorar la seguridad, Tomcat restringe por defecto el acceso a estas aplica
 Esta restricción se implementa mediante una **Valve** en el archivo:
 
 ```bash
-/usr/share/tomcat10/webapps/manager/META-INF/context.xml
+/etc/tomcat10/Catalina/localhost/manager.xml
 ```
 
 O también puede estar en:
 
 ```bash
-/etc/tomcat10/Catalina/localhost/manager.xml
+/usr/share/tomcat10-admin/manager/META-INF/context.xml
 ```
 
 ### Localizar el archivo de configuración:
 
 ```bash
-sudo find /etc/tomcat10 /usr/share/tomcat10 -name "context.xml" | grep manager
+sudo find /etc/tomcat10 /usr/share/tomcat10 -name "*manager*" -type f
 ```
-### Contenido predeterminado del archivo:
+
+En Tomcat 10, normalmente encontrarás:
+- `/etc/tomcat10/Catalina/localhost/manager.xml`
+- `/etc/tomcat10/Catalina/localhost/host-manager.xml`
+
+### Editar el archivo del Manager:
+
+```bash
+sudo nano /etc/tomcat10/Catalina/localhost/manager.xml
+```
+
+### Contenido del archivo:
+
+El archivo `/etc/tomcat10/Catalina/localhost/manager.xml` contiene:
 
 ```xml
 <Context antiResourceLocking="false" privileged="true" >
@@ -105,17 +138,24 @@ Esta configuración solo permite acceso desde localhost (127.x.x.x o ::1).
 </Context>
 ```
 
-### Aplicar lo mismo al Host Manager:
+#### Opción 3: Deshabilitar la restricción completamente (NO RECOMENDADO en producción)
 
-```bash
-sudo nano /usr/share/tomcat10/webapps/host-manager/META-INF/context.xml
+Comentar la sección `<Valve>`:
+
+```xml
+<Context antiResourceLocking="false" privileged="true" >
+  <!-- <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+</Context>
 ```
 
-O:
+### Aplicar lo mismo al Host Manager:
 
 ```bash
 sudo nano /etc/tomcat10/Catalina/localhost/host-manager.xml
 ```
+
+Aplicar la misma modificación que hiciste en `manager.xml`.
 
 ### Reiniciar Tomcat después de los cambios:
 
