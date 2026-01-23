@@ -12,4 +12,5 @@ Para poder administrar Apache Tomcat mediante sus herramientas web, es necesario
 La interfaz **Manager App** permite realizar tareas como el despliegue, recarga, parada y eliminación de aplicaciones web.
 
 Para acceder a ella, se utiliza la siguiente URL desde un navegador:
+(http://localhost:8080/manager/html)
 
