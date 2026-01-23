@@ -60,17 +60,18 @@ El archivo viene con usuarios de ejemplo **comentados**. Debes descomentar y mod
 
 ![Seguridad_Tomcat_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_seguridad_1.png)
 
-### Reiniciar Tomcat:
+### Reiniciamos Tomcat con:
 
 ```bash
 sudo systemctl restart tomcat10
 ```
 
-### Verificar el estado:
+### Verificar el  estado de Tomcat después de reiniciar:
 
 ```bash
 sudo systemctl status tomcat10
 ```
+![Seguridad_Tomcat_2](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_seguridad_2.png)
 
 ## 2. Restringir el acceso al Manager
 
