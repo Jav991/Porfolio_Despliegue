@@ -19,4 +19,40 @@ A continuación se muestra la ventana de autenticación para acceder a la interf
 Tras la autenticación, accedemos correctamente a la interfaz del Tomcat Web Application Manager, desde la cual es posible gestionar las aplicaciones desplegadas en el servidor.
 ![Acceso_Manager_2](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_herramientas/Interfaz_Manager_2.png)
 
+## 2. Funciones principales de Manager y Host Manager
+
+Las herramientas **Manager** y **Host Manager** de Apache Tomcat permiten administrar aplicaciones web y hosts virtuales de forma centralizada a través de una interfaz web segura.
+
+### 2.1 Despliegue de aplicaciones
+
+El **Manager** permite desplegar aplicaciones web de distintas formas:
+- Subiendo archivos `.war` directamente desde la interfaz web.
+- Desplegando aplicaciones ya existentes en el sistema de archivos del servidor.
+- Indicando una URL desde la que Tomcat descargará el archivo `.war`.
+
+Una vez desplegada, la aplicación queda accesible mediante su contexto correspondiente.
+
+### 2.2 Recarga de aplicaciones
+
+La función de **recarga (reload)** permite reiniciar una aplicación web sin necesidad de reiniciar todo el servidor Tomcat.  
+Esto es útil tras realizar cambios en la configuración o en el código de la aplicación, minimizando el impacto en el resto de servicios.
+
+### 2.3 Parada y arranque de aplicaciones
+
+Desde el Manager es posible:
+- **Detener (stop)** una aplicación web, dejándola temporalmente fuera de servicio.
+- **Iniciar (start)** nuevamente la aplicación cuando sea necesario.
+
+Estas acciones permiten realizar tareas de mantenimiento o resolución de problemas sin afectar al servidor completo.
+
+### 2.4 Creación de hosts virtuales
+
+El **Host Manager** permite la gestión de hosts virtuales en Tomcat, entre sus funciones se incluyen:
+- Crear nuevos hosts virtuales asociados a distintos nombres de dominio.
+- Definir directorios base independientes para cada host.
+- Activar o desactivar hosts según las necesidades del servidor.
+
+Gracias a los hosts virtuales, un único servidor Tomcat puede alojar múltiples sitios web de forma organizada y aislada.
+
+
 
