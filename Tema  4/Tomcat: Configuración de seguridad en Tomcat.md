@@ -39,14 +39,14 @@ Tomcat define varios roles administrativos:
 sudo nano /etc/tomcat10/tomcat-users.xml
 ```
 
+### deberia quedar así
+![Seguridad_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_seguridad_1.png)
+
 Después de modificar el archivo, reinicia Tomcat:
 
 ```bash
 sudo systemctl restart tomcat10
 ```
-
-### deberia quedar así
-![Seguridad_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_seguridad_1.png)
 
 ## 2. Restringir el acceso al Manager
 
