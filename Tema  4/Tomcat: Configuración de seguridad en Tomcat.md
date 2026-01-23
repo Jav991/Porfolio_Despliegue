@@ -176,4 +176,7 @@ sudo keytool -genkeypair -alias tomcat -keyalg RSA -keysize 3072 -keystore /etc/
 y deberia salir
 
 ![Configurar_HTTPS_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Configurar_SSL_1.png)
+
+cambiamos lo permisos para que keystore pueda acceder
+![Configurar_HTPPS_2](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/permiso_1.png)
      
