@@ -20,9 +20,7 @@ El comando se ejecuta correctamente y Docker descarga la imagen oficial de Tomca
 En la salida se observa cómo se descargan las distintas capas de la imagen y, finalmente, el mensaje *“Status: Downloaded newer image for tomcat:latest”*, lo que confirma que la imagen se ha descargado y está disponible en el sistema para su uso.
 
 ## 2. Montaje de una aplicación en `/usr/local/tomcat/webapps`
-
 En este apartado despliego una aplicación web sencilla en Tomcat utilizando Docker, montándola directamente en el directorio `webapps`, que es donde Tomcat carga automáticamente las aplicaciones.
----
 
 ### 2.1 Creación de la aplicación de prueba
 
