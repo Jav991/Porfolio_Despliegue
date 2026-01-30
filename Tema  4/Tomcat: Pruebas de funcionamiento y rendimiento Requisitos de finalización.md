@@ -65,3 +65,16 @@ A partir de este análisis, realizo ajustes en la configuración del servidor **
 
 Después de aplicar estos cambios, reinicio el servidor Tomcat para que la nueva configuración tenga efecto y repito las pruebas de carga, con el objetivo de comprobar si los ajustes realizados producen una mejora en el rendimiento general de la aplicación.
 
+## 4. Comparación del rendimiento antes y después de la optimización
+
+Una vez realizadas las pruebas de carga iniciales con la configuración por defecto de Apache Tomcat, se procedió a optimizar el conector HTTP del puerto 8080 modificando distintos parámetros en el archivo `server.xml`.
+
+Antes de la optimización, el servidor utilizaba una configuración básica sin ajustes específicos para la gestión de hilos ni para el control del número máximo de conexiones concurrentes. Bajo carga, el tiempo de respuesta aumentaba progresivamente a medida que se incrementaba el número de peticiones simultáneas, aunque el servidor seguía respondiendo correctamente.
+
+Tras aplicar los ajustes de rendimiento, aumentando el número máximo de hilos, definiendo un número mínimo de hilos en espera y ampliando el número de conexiones aceptadas, se repitieron las pruebas de carga utilizando las mismas herramientas y parámetros.
+
+Los resultados obtenidos muestran una mejora en el comportamiento del servidor, especialmente en escenarios con múltiples solicitudes concurrentes. El tiempo de respuesta se mantuvo más estable y el servidor fue capaz de gestionar un mayor volumen de peticiones sin errores, lo que indica una mejor utilización de los recursos disponibles.
+
+En conclusión, la optimización del conector HTTP permitió mejorar el rendimiento general del servidor Apache Tomcat, demostrando la importancia de ajustar correctamente su configuración para entornos con carga concurrente.
+
+
