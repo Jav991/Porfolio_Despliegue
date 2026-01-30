@@ -15,5 +15,6 @@ En primer lugar, se descarga la imagen oficial de Apache Tomcat desde Docker Hub
 docker pull tomcat:latest
 ```
 ![Tomcat_Contenedor_1](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomacat_Contenedores/Tomcat_Contenedor_1.png)
+
 El comando se ejecuta correctamente y Docker descarga la imagen oficial de Tomcat desde Docker Hub.  
 En la salida se observa cómo se descargan las distintas capas de la imagen y, finalmente, el mensaje *“Status: Downloaded newer image for tomcat:latest”*, lo que confirma que la imagen se ha descargado y está disponible en el sistema para su uso.
