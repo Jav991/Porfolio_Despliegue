@@ -30,6 +30,7 @@ Primero creo un directorio en el sistema anfitrión que contendrá la aplicació
   mkdir ~/tomcat-app
 ```
 Dentro de este directorio creo un archivo index.jsp para comprobar que el despliegue funciona correctamente:
+
 ![Tomcat_Contenedor_2](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomacat_Contenedores/Tomcat_Contenedor_2.png)
 
 
