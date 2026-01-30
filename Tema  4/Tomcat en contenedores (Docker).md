@@ -33,4 +33,21 @@ Dentro de este directorio creo un archivo index.jsp para comprobar que el despli
 
 ![Tomcat_Contenedor_2](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomacat_Contenedores/Tomcat_Contenedor_2.png)
 
+Este archivo sirve como aplicación de prueba para verificar que Tomcat carga correctamente el contenido montado desde el host.
+
+### 2.2 Ejecución del contenedor Tomcat
+
+Una vez creada la aplicación de prueba, ejecuto el contenedor de Tomcat montando el directorio local en `/usr/local/tomcat/webapps`. De este modo, Tomcat cargará automáticamente la aplicación al iniciarse.
+
+Para ello utilizo el siguiente comando:
+
+```bash
+docker run -d \
+  --name tomcat-app \
+  -p 8080:8080 \
+  -v ~/tomcat-app:/usr/local/tomcat/webapps/ROOT \
+  tomcat:latest
+```
+
+![Tomcat_Contenedor_3](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomacat_Contenedores/Tomcat_Contenedor_3.png)
 
