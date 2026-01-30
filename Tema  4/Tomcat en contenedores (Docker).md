@@ -50,4 +50,48 @@ docker run -d \
 ```
 
 ![Tomcat_Contenedor_3](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/Tomacat_Contenedores/Tomcat_Contenedor_3.png)
+Como se observa en la captura, el contenedor de Tomcat se ha iniciado correctamente, ya que Docker devuelve el identificador del contenedor tras ejecutar el comando. Esto indica que el servidor se encuentra en ejecución en segundo plano.
+
+El puerto 8080 del contenedor se ha mapeado al puerto 8081 del sistema anfitrión, permitiendo el acceso a la aplicación web desde el navegador. Además, el directorio local se ha montado correctamente en la ruta `/usr/local/tomcat/webapps/ROOT`, lo que permite que Tomcat cargue automáticamente la aplicación al iniciarse.
+
+
+## 3. Diferencias entre Tomcat nativo y Tomcat en contenedor
+
+El uso de **Apache Tomcat instalado de forma nativa** y **Apache Tomcat ejecutándose dentro de un contenedor Docker** presenta varias diferencias importantes en cuanto a instalación, configuración y despliegue.
+
+### Tomcat nativo
+
+En una instalación nativa, Tomcat se instala directamente sobre el sistema operativo. Esto implica configurar manualmente dependencias como Java, ajustar rutas, usuarios y permisos, así como modificar archivos de configuración del sistema.
+
+Este enfoque ofrece un mayor control sobre el servidor y su integración con el sistema, pero también puede generar problemas de compatibilidad entre entornos y dificulta la portabilidad de la aplicación.
+
+**Características principales:**
+- Instalación directa en el sistema operativo.
+- Configuración manual de Java y variables de entorno.
+- Mayor dependencia del sistema anfitrión.
+- Menor portabilidad entre equipos.
+
+### Tomcat en contenedor (Docker)
+
+En el caso de Tomcat en contenedor, el servidor se ejecuta dentro de una imagen Docker que ya incluye todo lo necesario para funcionar. Esto permite desplegar Tomcat de forma rápida y consistente en cualquier sistema que tenga Docker instalado.
+
+Además, el uso de contenedores facilita el aislamiento de la aplicación, evitando conflictos con otras versiones de software y simplificando el proceso de despliegue.
+
+**Características principales:**
+- No requiere instalación directa de Tomcat ni Java en el sistema.
+- Despliegue rápido y reproducible.
+- Aislamiento del entorno de ejecución.
+- Mayor portabilidad entre distintos sistemas.
+
+### Comparación general
+
+| Tomcat nativo | Tomcat en contenedor |
+|--------------|---------------------|
+| Instalación manual | Instalación mediante imagen Docker |
+| Dependiente del sistema | Independiente del sistema |
+| Menor portabilidad | Alta portabilidad |
+| Configuración más compleja | Configuración más sencilla |
+| Mayor control directo | Mayor facilidad de despliegue |
+
+En conclusión, mientras que **Tomcat nativo** es adecuado para entornos donde se requiere un control exhaustivo del sistema, **Tomcat en contenedor** resulta más práctico para entornos de pruebas, desarrollo y despliegues rápidos, aportando flexibilidad y facilidad de mantenimiento.
 
