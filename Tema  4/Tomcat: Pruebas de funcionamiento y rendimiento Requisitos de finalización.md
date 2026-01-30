@@ -51,4 +51,17 @@ La ejecución del comando `curl --parallel --parallel-immediate` devuelve correc
 
 La respuesta obtenida muestra el contenido HTML correspondiente a la página principal de Tomcat, indicando que todas las solicitudes han sido atendidas correctamente durante la prueba.
 
+## 3. Registro de resultados y ajustes en `server.xml`
+
+Tras la ejecución de las pruebas de carga, registro los resultados obtenidos con cada herramienta, prestando especial atención a métricas como el tiempo de respuesta, el número de peticiones atendidas por segundo y la aparición de posibles errores durante las pruebas.
+
+A partir de este análisis, realizo ajustes en la configuración del servidor **Apache Tomcat** para mejorar su rendimiento. Estos cambios se llevan a cabo en el archivo de configuración `server.xml`, donde modifico principalmente parámetros relacionados con:
+
+- **Gestión de hilos**, ajustando el número máximo de hilos disponibles para atender peticiones concurrentes.
+- **Conexiones**, configurando el número máximo de conexiones simultáneas permitidas.
+- **Tiempos de espera**, optimizando los valores de timeout para evitar bloqueos innecesarios y mejorar la eficiencia del servidor.
+
+![Configuración_Tomcat_Pruebas](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_pruebas/Tomcat_Prueba3.png)
+
+Después de aplicar estos cambios, reinicio el servidor Tomcat para que la nueva configuración tenga efecto y repito las pruebas de carga, con el objetivo de comprobar si los ajustes realizados producen una mejora en el rendimiento general de la aplicación.
 
