@@ -36,7 +36,7 @@ En esta prueba se envían 1000 peticiones al servidor, de las cuales 50 se reali
 ![Prueba_ApacheBench](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_pruebas/Tomcat_prueba1.png)
 ![Prueba_ApacheBench](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_pruebas/Tomcat_prueba1_2.png)
 
-### Pruebas con curl en ejecución paralela
+### Pruebas de carga con curl (--parallel)
 
 Además de las pruebas realizadas con ApacheBench, ejecuto una prueba de carga sencilla utilizando el comando **curl** con ejecución en paralelo, con el objetivo de simular múltiples peticiones HTTP simultáneas a la aplicación desplegada en **Apache Tomcat**.
 
@@ -47,12 +47,8 @@ curl --parallel --parallel-immediate http://localhost:8080/{1..50}
 ```
 ![Tomcat_Pruebas2](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/toncat/tomcat_pruebas/Tomcat_Pruebas2.png)
 
-Este comando envía 50 peticiones HTTP de forma concurrente al servidor. La opción --parallel permite ejecutar varias solicitudes al mismo tiempo, mientras que --parallel-immediate fuerza el inicio inmediato de todas las peticiones sin esperar a que finalicen las anteriores.
+La ejecución del comando `curl --parallel --parallel-immediate` devuelve correctamente la página por defecto de Apache Tomcat, lo que confirma que el servidor se encuentra en funcionamiento y es capaz de responder a múltiples peticiones concurrentes sin producir errores.
 
-Durante la ejecución de la prueba se puede observar cómo el servidor gestiona múltiples solicitudes concurrentes, apreciándose un ligero incremento en el tiempo de respuesta a medida que aumenta la carga. No obstante, el servidor responde correctamente a todas las peticiones, sin producirse errores visibles durante la prueba.
-
-Esta prueba permite verificar de forma rápida el correcto funcionamiento del servidor bajo carga, complementando los resultados obtenidos con otras herramientas de pruebas de rendimiento.
-
-
+La respuesta obtenida muestra el contenido HTML correspondiente a la página principal de Tomcat, indicando que todas las solicitudes han sido atendidas correctamente durante la prueba.
 
 
