@@ -3,7 +3,7 @@
 
 En esta práctica trabajo con **Apache Tomcat** utilizando contenedores **Docker**, con el objetivo de desplegar y ejecutar una aplicación web de forma aislada, portable y reproducible. El uso de contenedores permite simplificar el proceso de despliegue y evitar problemas derivados de diferencias en la configuración del sistema operativo o del entorno de ejecución.
 
-Para ello, se utiliza una imagen oficial de Tomcat disponible en Docker Hub, que proporciona una instalación preconfigurada del servidor. A partir de esta imagen, se ejecuta un contenedor que permite acceder a la aplicación web a través del navegador, comprobando su correcto funcionamiento.
+Para ello, utilizo una imagen oficial de Tomcat disponible en Docker Hub, que proporciona una instalación preconfigurada del servidor. A partir de esta imagen, se ejecuta un contenedor que permite acceder a la aplicación web a través del navegador, comprobando su correcto funcionamiento.
 
 ---
 
