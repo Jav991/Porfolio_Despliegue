@@ -95,3 +95,14 @@ Además, el uso de contenedores facilita el aislamiento de la aplicación, evita
 
 En conclusión, mientras que **Tomcat nativo** es adecuado para entornos donde se requiere un control exhaustivo del sistema, **Tomcat en contenedor** resulta más práctico para entornos de pruebas, desarrollo y despliegues rápidos, aportando flexibilidad y facilidad de mantenimiento.
 
+
+## 4. Despliegue en la nube (opcional)
+
+De forma opcional, la aplicación desplegada en **Apache Tomcat** podría ejecutarse en un entorno de nube utilizando servicios de infraestructura como **AWS EC2**, **Azure Virtual Machine** o **Google Compute Engine**.
+
+En este tipo de entornos, el proceso de despliegue sería similar al realizado en local, creando una máquina virtual con un sistema operativo Linux y configurando en ella Docker o Tomcat de forma nativa. Una vez preparada la instancia, se podría desplegar la aplicación utilizando un contenedor Docker de Tomcat o mediante una instalación tradicional del servidor.
+
+El uso de la nube permitiría acceder a la aplicación desde Internet, mejorar la escalabilidad del sistema y facilitar la gestión de recursos, ya que estos servicios permiten aumentar o reducir la capacidad de la máquina en función de la carga.
+
+Aunque en esta práctica el despliegue se ha realizado en un entorno local, el uso de plataformas cloud supondría una extensión natural del trabajo realizado, aplicando los mismos conceptos de contenedores y configuración de servidores en un entorno de producción real.
+
