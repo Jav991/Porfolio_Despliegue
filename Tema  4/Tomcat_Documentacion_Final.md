@@ -97,4 +97,30 @@ La configuración del servidor Tomcat destaca por:
 - El uso de archivos XML fáciles de modificar.
 - La posibilidad de personalizar el comportamiento del servidor sin recompilar aplicaciones.
 
+## 3. Integración con servidor web
+
+Para mejorar el rendimiento y la gestión de las peticiones, integro Apache Tomcat con un servidor web externo, como **Apache HTTP Server**. Esta integración permite utilizar el servidor web como capa frontal, encargándose de recibir las solicitudes de los clientes, mientras que Tomcat procesa la lógica de las aplicaciones web.
+
+Este tipo de arquitectura es habitual en entornos profesionales, ya que permite separar claramente el servidor web del servidor de aplicaciones, mejorando la escalabilidad y el control del sistema.
+
+### 3.1 Funcionamiento de la integración
+
+El servidor web actúa como intermediario entre el cliente y Tomcat. Las peticiones HTTP entran primero por el servidor web, que decide si debe servir contenido estático directamente o redirigir la solicitud a Tomcat para su procesamiento.
+
+De esta forma, Tomcat se centra exclusivamente en la ejecución de servlets y aplicaciones Java, mientras que el servidor web gestiona las conexiones entrantes.
+
+### 3.2 Ventajas de la integración
+
+La integración de Tomcat con un servidor web aporta múltiples beneficios:
+
+- Mejora del rendimiento general del sistema.
+- Gestión más eficiente de las conexiones concurrentes.
+- Posibilidad de aplicar políticas de seguridad adicionales.
+- Mayor flexibilidad en la configuración del entorno.
+
+### 3.3 Uso en entornos reales
+
+Esta combinación es especialmente útil en entornos de producción, donde se requiere un mayor control sobre el tráfico web y una arquitectura más robusta. Gracias a esta integración, es posible adaptar el sistema a distintos escenarios sin modificar las aplicaciones desplegadas en Tomcat.
+
+
 
