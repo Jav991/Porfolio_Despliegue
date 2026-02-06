@@ -208,3 +208,42 @@ Estas pruebas también ponen de manifiesto la importancia de realizar ajustes es
 
 Las pruebas de rendimiento realizadas confirman que Apache Tomcat ofrece un comportamiento estable y predecible bajo carga, siempre que esté correctamente configurado. Este tipo de pruebas resulta esencial para garantizar un buen funcionamiento del servidor en entornos de producción y para anticiparse a posibles problemas de rendimiento.
 
+## 6. Recomendaciones de administración
+
+Una correcta administración de Apache Tomcat es fundamental para garantizar su estabilidad, seguridad y buen rendimiento a lo largo del tiempo. A partir del trabajo realizado durante esta práctica, se pueden extraer una serie de recomendaciones que facilitan la gestión del servidor y previenen posibles problemas.
+
+### 6.1 Mantenimiento y actualizaciones
+
+Es recomendable mantener siempre Apache Tomcat actualizado a la última versión estable. Las actualizaciones suelen incluir mejoras de rendimiento, correcciones de errores y parches de seguridad que ayudan a proteger el servidor frente a vulnerabilidades conocidas.
+
+Además, es importante revisar periódicamente la documentación oficial para estar al tanto de cambios relevantes o buenas prácticas recomendadas.
+
+### 6.2 Gestión de usuarios y permisos
+
+Se debe limitar el acceso a la consola de administración de Tomcat únicamente a los usuarios estrictamente necesarios. La asignación de roles debe realizarse siguiendo el principio de mínimo privilegio, evitando conceder permisos innecesarios que puedan suponer un riesgo de seguridad.
+
+También es aconsejable utilizar contraseñas robustas y cambiar las credenciales de acceso de forma periódica.
+
+### 6.3 Monitorización del servidor
+
+La monitorización del estado del servidor es clave para detectar problemas antes de que afecten al servicio. Es recomendable supervisar el uso de recursos como la memoria, la CPU y el número de conexiones activas, así como revisar los logs de Tomcat para identificar posibles errores o comportamientos anómalos.
+
+Una monitorización adecuada permite anticiparse a fallos y tomar decisiones informadas sobre ajustes de configuración o ampliación de recursos.
+
+### 6.4 Copias de seguridad
+
+Realizar copias de seguridad periódicas de la configuración del servidor y de las aplicaciones desplegadas es una práctica esencial. Esto facilita la recuperación del sistema en caso de fallo, error humano o pérdida de datos.
+
+Las copias de seguridad deben almacenarse en un lugar seguro y comprobarse de forma regular para garantizar su correcta restauración.
+
+### 6.5 Buenas prácticas generales
+
+Para una administración eficiente de Tomcat, también es recomendable:
+
+- Mantener una estructura clara y organizada de las aplicaciones.
+- Eliminar aplicaciones o configuraciones que no se utilicen.
+- Documentar los cambios realizados en la configuración del servidor.
+- Probar cualquier modificación en un entorno de pruebas antes de aplicarla en producción.
+
+Seguir estas recomendaciones contribuye a una gestión más segura, estable y eficiente del servidor Apache Tomcat.
+
