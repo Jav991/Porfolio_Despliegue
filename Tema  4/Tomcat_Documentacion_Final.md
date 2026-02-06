@@ -247,3 +247,16 @@ Para una administración eficiente de Tomcat, también es recomendable:
 
 Seguir estas recomendaciones contribuye a una gestión más segura, estable y eficiente del servidor Apache Tomcat.
 
+## 7. Despliegue en contenedores
+
+El despliegue de Apache Tomcat en contenedores representa una alternativa moderna al despliegue tradicional, ya que permite ejecutar el servidor en un entorno aislado, controlado y fácilmente reproducible. Durante esta práctica he trabajado con Tomcat utilizando contenedores Docker, lo que simplifica notablemente la instalación y gestión del servidor.
+
+Mediante el uso de una imagen oficial de Tomcat, es posible disponer de un servidor completamente funcional sin necesidad de realizar configuraciones complejas en el sistema operativo anfitrión. Esto reduce problemas de compatibilidad y facilita el despliegue de la aplicación en distintos entornos, como desarrollo, pruebas o producción.
+
+Una de las principales ventajas del uso de contenedores es la portabilidad. La aplicación y su entorno de ejecución quedan encapsulados en el contenedor, lo que garantiza que se comportará de la misma forma independientemente del sistema en el que se ejecute. Además, el despliegue es rápido y permite levantar o eliminar instancias del servidor de forma sencilla.
+
+Otra ventaja importante es la facilidad para gestionar versiones y realizar pruebas. Al trabajar con contenedores, se pueden crear diferentes instancias de Tomcat con configuraciones distintas sin que interfieran entre sí, lo que resulta muy útil para comparar comportamientos o probar cambios antes de llevarlos a producción.
+
+En conclusión, el despliegue de Tomcat en contenedores ofrece una solución flexible, eficiente y alineada con las prácticas actuales de despliegue de aplicaciones, complementando el uso de Tomcat instalado de forma nativa en el sistema.
+
+
