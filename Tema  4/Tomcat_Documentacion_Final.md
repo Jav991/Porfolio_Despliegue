@@ -169,3 +169,42 @@ Todas estas medidas adquieren una mayor relevancia en entornos de producción, d
 
 La aplicación de buenas prácticas de seguridad no solo protege el servidor, sino que también mejora la calidad y fiabilidad del servicio ofrecido.
 
+## 5. Pruebas de rendimiento
+
+Las pruebas de rendimiento son fundamentales para evaluar el comportamiento del servidor Apache Tomcat cuando recibe múltiples solicitudes de forma simultánea. Durante esta práctica he realizado distintas pruebas con el objetivo de comprobar la capacidad de respuesta del servidor y analizar cómo se comporta bajo diferentes niveles de carga.
+
+Estas pruebas permiten detectar posibles cuellos de botella, evaluar la estabilidad del sistema y comprobar si la configuración del servidor es adecuada para soportar un número elevado de usuarios concurrentes.
+
+### 5.1 Objetivo de las pruebas
+
+El principal objetivo de las pruebas de rendimiento ha sido analizar:
+
+- El tiempo de respuesta del servidor ante múltiples peticiones.
+- La estabilidad del sistema bajo carga.
+- La aparición de posibles errores durante la ejecución.
+- La influencia de la configuración del servidor en el rendimiento general.
+
+De esta forma, es posible evaluar si Tomcat responde correctamente en situaciones similares a un entorno real.
+
+### 5.2 Metodología utilizada
+
+Para realizar las pruebas se ha simulado el acceso concurrente de varios usuarios a la aplicación desplegada en Tomcat. Durante la ejecución de las pruebas se ha observado cómo el servidor gestiona las solicitudes entrantes y cómo varían los tiempos de respuesta a medida que aumenta la carga.
+
+Las pruebas se han llevado a cabo tanto antes como después de realizar ajustes en la configuración del servidor, lo que permite comparar resultados y comprobar si se ha producido una mejora en el rendimiento.
+
+### 5.3 Resultados obtenidos
+
+Los resultados obtenidos muestran que, bajo cargas moderadas, el servidor responde de forma estable y sin errores. A medida que aumenta el número de solicitudes simultáneas, se aprecia un incremento progresivo en el tiempo de respuesta, lo cual es un comportamiento esperado.
+
+Tras realizar ajustes en la configuración del servidor, el rendimiento mejora, permitiendo gestionar un mayor número de peticiones concurrentes de forma más eficiente y reduciendo los tiempos de espera.
+
+### 5.4 Análisis del comportamiento del servidor
+
+El análisis de los resultados permite comprobar que Apache Tomcat es capaz de adaptarse correctamente a escenarios de carga variable. Una configuración adecuada del servidor influye directamente en su capacidad para gestionar solicitudes concurrentes sin degradar el servicio.
+
+Estas pruebas también ponen de manifiesto la importancia de realizar ajustes específicos según el entorno en el que se vaya a desplegar la aplicación, ya que una configuración por defecto puede no ser suficiente en escenarios más exigentes.
+
+### 5.5 Conclusión de las pruebas de rendimiento
+
+Las pruebas de rendimiento realizadas confirman que Apache Tomcat ofrece un comportamiento estable y predecible bajo carga, siempre que esté correctamente configurado. Este tipo de pruebas resulta esencial para garantizar un buen funcionamiento del servidor en entornos de producción y para anticiparse a posibles problemas de rendimiento.
+
