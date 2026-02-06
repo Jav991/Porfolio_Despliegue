@@ -123,4 +123,49 @@ La integración de Tomcat con un servidor web aporta múltiples beneficios:
 Esta combinación es especialmente útil en entornos de producción, donde se requiere un mayor control sobre el tráfico web y una arquitectura más robusta. Gracias a esta integración, es posible adaptar el sistema a distintos escenarios sin modificar las aplicaciones desplegadas en Tomcat.
 
 
+## 4. Seguridad aplicada
+
+La seguridad es un aspecto clave en la administración de un servidor Apache Tomcat, ya que este actúa como punto de acceso a las aplicaciones web desplegadas. Durante el desarrollo de esta práctica he tenido en cuenta diferentes medidas de seguridad orientadas a proteger tanto el servidor como las aplicaciones, reduciendo riesgos y posibles accesos no autorizados.
+
+### 4.1 Gestión de usuarios y roles
+
+Tomcat incorpora un sistema de autenticación y autorización basado en usuarios y roles, que permite controlar el acceso a las herramientas de administración del servidor. Mediante esta configuración es posible definir qué usuarios pueden acceder a la consola de administración y qué acciones están autorizados a realizar.
+
+Esta gestión por roles facilita la separación de responsabilidades, permitiendo que solo los usuarios necesarios tengan acceso a funciones críticas del servidor, lo que mejora notablemente la seguridad del sistema.
+
+### 4.2 Protección de la consola de administración
+
+Las aplicaciones de administración incluidas en Tomcat son especialmente sensibles, ya que permiten gestionar aplicaciones, usuarios y configuraciones del servidor. Por este motivo, es fundamental restringir su acceso y evitar que estén expuestas innecesariamente.
+
+Limitar el acceso a estas herramientas contribuye a prevenir ataques y usos indebidos del servidor, especialmente en entornos donde Tomcat está accesible desde redes externas.
+
+### 4.3 Uso de conexiones seguras (HTTPS)
+
+El uso de HTTPS permite cifrar la comunicación entre el cliente y el servidor, protegiendo los datos que se transmiten durante las peticiones. Esto resulta especialmente importante cuando las aplicaciones manejan información sensible o credenciales de usuario.
+
+Mediante el uso de certificados digitales, Tomcat puede garantizar que la comunicación sea segura, evitando posibles ataques de interceptación y aumentando la confianza de los usuarios en las aplicaciones desplegadas.
+
+### 4.4 Restricción de aplicaciones y servicios innecesarios
+
+Tomcat incluye por defecto aplicaciones de ejemplo y funcionalidades que no siempre son necesarias. Mantener activados únicamente los servicios imprescindibles reduce la superficie de ataque del servidor y minimiza el riesgo de explotación de vulnerabilidades.
+
+Eliminar o deshabilitar aplicaciones que no se utilizan es una buena práctica de seguridad que ayuda a mantener el sistema más controlado y estable.
+
+### 4.5 Control y revisión de registros
+
+El análisis de los registros del servidor es una herramienta fundamental para detectar posibles problemas de seguridad. A través de los logs es posible identificar accesos no autorizados, errores recurrentes o comportamientos anómalos en el servidor.
+
+Una revisión periódica de estos registros permite anticiparse a posibles incidencias y mejorar la respuesta ante problemas de seguridad.
+
+### 4.6 Actualizaciones y mantenimiento del servidor
+
+Mantener Tomcat actualizado es una de las medidas más importantes para garantizar la seguridad del sistema. Las actualizaciones corrigen vulnerabilidades detectadas y mejoran la estabilidad del servidor.
+
+Además, un mantenimiento regular de la configuración y de las aplicaciones desplegadas contribuye a reducir riesgos y a mantener un entorno más seguro y fiable.
+
+### 4.7 Importancia de la seguridad en entornos reales
+
+Todas estas medidas adquieren una mayor relevancia en entornos de producción, donde el servidor puede estar expuesto a Internet. Una correcta configuración de la seguridad en Tomcat es fundamental para garantizar la disponibilidad, integridad y confidencialidad de las aplicaciones web.
+
+La aplicación de buenas prácticas de seguridad no solo protege el servidor, sino que también mejora la calidad y fiabilidad del servicio ofrecido.
 
