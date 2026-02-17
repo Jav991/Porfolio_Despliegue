@@ -52,3 +52,9 @@ para conexiones FTP y en el puerto **14148** para la consola de administración.
 
 ![Finalización_Configuración_e_instalacion](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/Filezilla/Instalaci%C3%B3n%20y%20configuraci%C3%B3n%20inicial%20del%20servidor/Confiuraci%C3%B3n_Filezilla_3.png)
 
+
+## 2. Acceso a la consola de administración
+
+Para acceder a la consola de administración web de FileZilla Server, abrimos el navegador e introducimos la siguiente dirección: (http://localhost:14148)
+
+
