@@ -35,7 +35,8 @@ Descragé el archivo desde su página web [web_Filezilla](https://filezilla-proj
 ```bash
   sudo apt update && sudo dpkg -i FileZilla_Server_1.12.3_x86_64-linux-gnu.deb
 ```
-Despés nos pedirá que pongamos una contraseña contraseña
+Durante la instalación, el sistema mostrará un asistente de configuración solicitando  una contraseña de administrador. Es muy recomendable establecer una contraseña segura, 
+ya que sin ella no podremos administrar FileZilla Server de forma remota.
 ![Instalación_Filezilla](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/Filezilla/Instalaci%C3%B3n%20y%20configuraci%C3%B3n%20inicial%20del%20servidor/Configuraci%C3%B3n_FIlezilla.png)
 
 Para comprobar que el servicio está activo ejecuté:
