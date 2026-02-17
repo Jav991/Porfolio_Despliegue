@@ -39,6 +39,11 @@ Durante la instalación, el sistema mostrará un asistente de configuración sol
 ya que sin ella no podremos administrar FileZilla Server de forma remota.
 ![Instalación_Filezilla](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/Filezilla/Instalaci%C3%B3n%20y%20configuraci%C3%B3n%20inicial%20del%20servidor/Configuraci%C3%B3n_FIlezilla.png)
 
+A continuación el instalador pregunta si queremos permitir conexiones de administración 
+remota en todos los adaptadores de red. Seleccionamos **Sí** para poder acceder a la 
+consola de administración desde el navegador.
+![Administración_Remota](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/Filezilla/Instalaci%C3%B3n%20y%20configuraci%C3%B3n%20inicial%20del%20servidor/Cofiguracion_Filezilla_2.png)
+
 Para comprobar que el servicio está activo ejecuté:
 
 ```bash
