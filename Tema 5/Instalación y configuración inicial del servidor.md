@@ -46,9 +46,9 @@ consola de administración desde el navegador.
 
 ![Administración_Remota](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/Filezilla/Instalaci%C3%B3n%20y%20configuraci%C3%B3n%20inicial%20del%20servidor/Cofiguracion_Filezilla_2.png)
 
-Para comprobar que el servicio está activo ejecuté:
+Una vez completada la instalación, el propio instalador muestra el estado del servicio, 
+confirmando que FileZilla Server está **active (running)**, escuchando en el puerto **21** 
+para conexiones FTP y en el puerto **14148** para la consola de administración.
 
-```bash
-systemctl status filezilla-server
-```
+[Finalización_Configuración_e_instalacion](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/Filezilla/Instalaci%C3%B3n%20y%20configuraci%C3%B3n%20inicial%20del%20servidor/Confiuraci%C3%B3n_Filezilla_3.png)
 
