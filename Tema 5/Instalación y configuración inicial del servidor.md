@@ -33,9 +33,10 @@ Descragé el archivo desde su página web [web_Filezilla](https://filezilla-proj
 ![Descarga_Filezilla](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/Filezilla/Instalaci%C3%B3n%20y%20configuraci%C3%B3n%20inicial%20del%20servidor/descarga_FIlezilla.png)
 
 ```bash
-  sudo apt update && sudo apt install filezilla-server -y
+  sudo apt update && sudo dpkg -i FileZilla_Server_1.12.3_x86_64-linux-gnu.deb
 ```
-![Instalación_Filezilla]()
+Despés nos pedirá que pongamos una contraseña contraseña
+![Instalación_Filezilla](https://github.com/Jav991/Porfolio_Despliegue/blob/main/img/Filezilla/Instalaci%C3%B3n%20y%20configuraci%C3%B3n%20inicial%20del%20servidor/Configuraci%C3%B3n_FIlezilla.png)
 
 Para comprobar que el servicio está activo ejecuté:
 
